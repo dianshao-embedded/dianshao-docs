@@ -25,9 +25,6 @@ enableRobotsTXT = true
 [taxonomies]
    tag = "tags"
 
-[minify]
-  disableHTML = true
-
 [params]
   geekdocToC = 3
   geekdocTagsToMenu = true
