@@ -1,4 +1,4 @@
-baseURL = "https://dianshao-embedded.github.io/dianshao/"
+baseURL = "https://dianshao-embedded.github.io/dianshao-docs/"
 title = "Dianshao Docs"
 theme = "hugo-geekdoc"
 
