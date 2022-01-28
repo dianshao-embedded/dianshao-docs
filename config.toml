@@ -1,4 +1,5 @@
-baseURL = "https://dianshao-embedded.github.io/dianshao-docs/"
+## baseURL = "https://dianshao-embedded.github.io/dianshao-docs/"
+baseURL = "http://localhost"
 title = "Dianshao Docs"
 theme = "hugo-geekdoc"
 
@@ -23,3 +24,12 @@ enableRobotsTXT = true
 
 [taxonomies]
    tag = "tags"
+
+[minify]
+  disableHTML = true
+
+[params]
+  geekdocToC = 3
+  geekdocTagsToMenu = true
+  geekdocRepo = 'https://github.com/dianshao-embedded/dianshao-docs'
+  geekdocEditPath = "/content"
