@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /tags/*
 
-Sitemap: https://dianshao-embedded.github.io/dianshao-docs/sitemap.xml
+Sitemap: http://localhost/sitemap.xml
