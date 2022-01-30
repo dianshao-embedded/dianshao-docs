@@ -33,4 +33,4 @@ weight: 1
 * [JQuery](https://jquery.com)
 
 ## 3. 系统架构
-![Example image](/static/images/architecture.png)
+![Example image](/images/architecture.png)
