@@ -9,13 +9,17 @@
 
 
 
-  <meta name="description" content="Dianshao Docs" />
+  <meta name="description" content="1. 说明 2. 安装  2.1 资源要求 2.2 安装准备 2.3 安装   3. 创建项目 4. 增加元数据层 5. 增加软件包 6. 制作镜像文件 7. 编译项目      1. 说明     本文将从零开始，让您快速的部署颠勺并构建第一个 Yocto 项目。
+本文主要目的是让您快速体验颠勺，希望在短时间内，可以说服您这个项目对嵌入式 Linux 项目开发是非常有用，可以提供生产力的。
+详细的使用说明请参考颠勺用户手册，里面会更加详细的介绍颠勺所有的功能以及您最好掌握的相关知识说明。
+2. 安装     2.1 资源要求     由于需要编译 Yocto 项目，所以对资源要求较高，具体要求如下
+ 内存最小 4GB，推荐使用 8GB 及以上 硬盘剩余空间大于 80GB  同时，为了提高编译效率，需要较多的 CPU 核，根据我个人的使用经验，10核以下机器编译体验较差。因此不建议长期使用个人电脑运行颠勺，编译效率过低往往会打消您的热情，影响您的工作效率。推荐将颠勺运行于服务器或者工作站之上，一台普通的16核32G的服务器即可满足要求。" />
 
 
 
     <title>
       
-        Tags | 
+        快速开始 | 
       Dianshao Docs
     </title>
 
@@ -35,15 +39,25 @@
 
     
 
-    <meta property="og:title" content="Tags" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://dianshao-embedded.github.io/dianshao-docs/tags/" />
+    <meta property="og:title" content="快速开始" />
+<meta property="og:description" content="1. 说明 2. 安装  2.1 资源要求 2.2 安装准备 2.3 安装   3. 创建项目 4. 增加元数据层 5. 增加软件包 6. 制作镜像文件 7. 编译项目      1. 说明     本文将从零开始，让您快速的部署颠勺并构建第一个 Yocto 项目。
+本文主要目的是让您快速体验颠勺，希望在短时间内，可以说服您这个项目对嵌入式 Linux 项目开发是非常有用，可以提供生产力的。
+详细的使用说明请参考颠勺用户手册，里面会更加详细的介绍颠勺所有的功能以及您最好掌握的相关知识说明。
+2. 安装     2.1 资源要求     由于需要编译 Yocto 项目，所以对资源要求较高，具体要求如下
+ 内存最小 4GB，推荐使用 8GB 及以上 硬盘剩余空间大于 80GB  同时，为了提高编译效率，需要较多的 CPU 核，根据我个人的使用经验，10核以下机器编译体验较差。因此不建议长期使用个人电脑运行颠勺，编译效率过低往往会打消您的热情，影响您的工作效率。推荐将颠勺运行于服务器或者工作站之上，一台普通的16核32G的服务器即可满足要求。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dianshao-embedded.github.io/dianshao-docs/quickstart/quickstart/" /><meta property="article:section" content="quickstart" />
+
+
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tags"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="快速开始"/>
+<meta name="twitter:description" content="1. 说明 2. 安装  2.1 资源要求 2.2 安装准备 2.3 安装   3. 创建项目 4. 增加元数据层 5. 增加软件包 6. 制作镜像文件 7. 编译项目      1. 说明     本文将从零开始，让您快速的部署颠勺并构建第一个 Yocto 项目。
+本文主要目的是让您快速体验颠勺，希望在短时间内，可以说服您这个项目对嵌入式 Linux 项目开发是非常有用，可以提供生产力的。
+详细的使用说明请参考颠勺用户手册，里面会更加详细的介绍颠勺所有的功能以及您最好掌握的相关知识说明。
+2. 安装     2.1 资源要求     由于需要编译 Yocto 项目，所以对资源要求较高，具体要求如下
+ 内存最小 4GB，推荐使用 8GB 及以上 硬盘剩余空间大于 80GB  同时，为了提高编译效率，需要较多的 CPU 核，根据我个人的使用经验，10核以下机器编译体验较差。因此不建议长期使用个人电脑运行颠勺，编译效率过低往往会打消您的热情，影响您的工作效率。推荐将颠勺运行于服务器或者工作站之上，一台普通的16核32G的服务器即可满足要求。"/>
 
 
     <script src="/dianshao-docs/js/main-b1609106.bundle.min.js"></script>
@@ -112,6 +126,44 @@
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
     
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "TechArticle",
+    "articleSection": "quickstart",
+    "name": "快速开始",
+    "headline": "快速开始",
+    "alternativeHeadline": "",
+    "description": "1. 说明 2. 安装  2.1 资源要求 2.2 安装准备 2.3 安装   3. 创建项目 4. 增加元数据层 5. 增加软件包 6. 制作镜像文件 7. 编译项目      1. 说明     本文将从零开始，让您快速的部署颠勺并构建第一个 Yocto 项目。\n本文主要目的是让您快速体验颠勺，希望在短时间内，可以说服您这个项目对嵌入式 Linux 项目开发是非常有用，可以提供生产力的。\n详细的使用说明请参考颠勺用户手册，里面会更加详细的介绍颠勺所有的功能以及您最好掌握的相关知识说明。\n2. 安装     2.1 资源要求     由于需要编译 Yocto 项目，所以对资源要求较高，具体要求如下\n 内存最小 4GB，推荐使用 8GB 及以上 硬盘剩余空间大于 80GB  同时，为了提高编译效率，需要较多的 CPU 核，根据我个人的使用经验，10核以下机器编译体验较差。因此不建议长期使用个人电脑运行颠勺，编译效率过低往往会打消您的热情，影响您的工作效率。推荐将颠勺运行于服务器或者工作站之上，一台普通的16核32G的服务器即可满足要求。",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https:\/\/dianshao-embedded.github.io\/dianshao-docs\/quickstart\/quickstart\/"
+    },
+    "copyrightHolder" : "Dianshao Docs",
+    "copyrightYear" : "0001",
+    "dateCreated": "0001-01-01T00:00:00.00Z",
+    "datePublished": "0001-01-01T00:00:00.00Z",
+    "dateModified": "0001-01-01T00:00:00.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "Dianshao Docs",
+        "url": "https://dianshao-embedded.github.io/dianshao-docs/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/dianshao-embedded.github.io\/dianshao-docs\/brand.svg",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "url" : "https:\/\/dianshao-embedded.github.io\/dianshao-docs\/quickstart\/quickstart\/",
+    "wordCount" : "166",
+    "genre" : [ ]
+}
+</script>
+
 
     
 
@@ -345,7 +397,7 @@
                 <span class="flex">
                   <a
                     href="/dianshao-docs/quickstart/quickstart/"
-                    class="gdoc-nav__entry "
+                    class="gdoc-nav__entry is-active"
                   >
                     快速开始
                   </a>
@@ -381,14 +433,6 @@
   </section>
 
   
-    <section class="gdoc-nav--tags">
-      <h2>Tags</h2>
-      <ul class="gdoc-nav__list">
-        
-        
-      </ul>
-    </section>
-  
 
 
   <section class="gdoc-nav--more">
@@ -403,6 +447,237 @@
         <div class="gdoc-page">
           
   
+
+
+  
+
+
+
+
+
+
+<div
+  class="gdoc-page__header flex flex-wrap
+  
+    justify-between
+  
+  
+  "
+  itemprop="breadcrumb"
+>
+  
+    <div>
+      <svg class="icon gdoc_path hidden-mobile"><use xlink:href="#gdoc_path"></use></svg>
+      <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        
+        
+        
+        
+  
+  
+    
+    
+    
+    
+  
+  
+    
+    
+    
+    
+  
+  
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/dianshao-docs/' href='/dianshao-docs/'><span itemprop='name'>欢迎使用颠勺</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/dianshao-docs/quickstart/' href='/dianshao-docs/quickstart/'><span itemprop='name'>入门</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>快速开始</span><meta itemprop='position' content='4' /></li>
+  
+
+  
+
+  
+
+      </ol>
+    </div>
+  
+  
+    <div>
+      <span class="editpage">
+        <svg class="icon gdoc_code"><use xlink:href="#gdoc_code"></use></svg>
+        <a
+          href="https://github.com/dianshao-embedded/dianshao-docs//content/quickstart/quickstart.md"
+        >
+          Edit page
+        </a>
+      </span>
+    </div>
+  
+</div>
+
+
+
+  <article
+    class="gdoc-markdown gdoc-markdown__align--left"
+  >
+    <h1>快速开始</h1>
+    
+
+
+  <div class="gdoc-toc gdoc-toc__level--3">
+    <nav id="TableOfContents"><ul>
+        <li><a href="#1-说明">1. 说明</a></li>
+        <li><a href="#2-安装">2. 安装</a>
+          <ul>
+            <li><a href="#21-资源要求">2.1 资源要求</a></li>
+            <li><a href="#22-安装准备">2.2 安装准备</a></li>
+            <li><a href="#23-安装">2.3 安装</a></li>
+          </ul>
+        </li>
+        <li><a href="#3-创建项目">3. 创建项目</a></li>
+        <li><a href="#4-增加元数据层">4. 增加元数据层</a></li>
+        <li><a href="#5-增加软件包">5. 增加软件包</a></li>
+        <li><a href="#6-制作镜像文件">6. 制作镜像文件</a></li>
+        <li><a href="#7-编译项目">7. 编译项目</a></li>
+      </ul></nav>
+    <hr />
+  </div>
+
+
+<div class="gdoc-page__anchorwrap">
+    <h2 id="1-说明">
+        1. 说明
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/quickstart/quickstart/#1-说明" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 1. 说明" aria-label="Anchor to: 1. 说明" href="#1-%e8%af%b4%e6%98%8e">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>本文将从零开始，让您快速的部署<strong>颠勺</strong>并构建第一个 Yocto 项目。</p>
+<p>本文主要目的是让您快速体验<strong>颠勺</strong>，希望在短时间内，可以说服您这个项目对嵌入式 Linux 项目开发是非常有用，可以提供生产力的。</p>
+<p>详细的使用说明请参考颠勺用户手册，里面会更加详细的介绍颠勺所有的功能以及您最好掌握的相关知识说明。</p>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="2-安装">
+        2. 安装
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/quickstart/quickstart/#2-安装" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 2. 安装" aria-label="Anchor to: 2. 安装" href="#2-%e5%ae%89%e8%a3%85">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<div class="gdoc-page__anchorwrap">
+    <h3 id="21-资源要求">
+        2.1 资源要求
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/quickstart/quickstart/#21-资源要求" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 2.1 资源要求" aria-label="Anchor to: 2.1 资源要求" href="#21-%e8%b5%84%e6%ba%90%e8%a6%81%e6%b1%82">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h3>
+</div>
+<p>由于需要编译 Yocto 项目，所以对资源要求较高，具体要求如下</p>
+<ul>
+<li>内存最小 4GB，推荐使用 8GB 及以上</li>
+<li>硬盘剩余空间大于 80GB</li>
+</ul>
+<p>同时，为了提高编译效率，需要较多的 CPU 核，根据我个人的使用经验，10核以下机器编译体验较差。因此不建议长期使用个人电脑运行颠勺，编译效率过低往往会打消您的热情，影响您的工作效率。推荐将颠勺运行于服务器或者工作站之上，一台普通的16核32G的服务器即可满足要求。</p>
+<p>除此之外，非常重要的一点是请确保您的网络可以通畅连接到各个源码仓库。Yocto 项目采用完全从源码编译的方式构建项目，因此第一次编译时需要拉取项目包含的软件源码包。如果您的机器无法很好的访问这些源码仓库，你会遇到多次失败，或者等待一周甚至更长时间也无法完成编译。</p>
+<p>工欲善其事必先利其器，建议您将宿主机的资源和网络准备好后再开始使用颠勺</p>
+<div class="gdoc-page__anchorwrap">
+    <h3 id="22-安装准备">
+        2.2 安装准备
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/quickstart/quickstart/#22-安装准备" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 2.2 安装准备" aria-label="Anchor to: 2.2 安装准备" href="#22-%e5%ae%89%e8%a3%85%e5%87%86%e5%a4%87">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h3>
+</div>
+<p>目前，颠勺已经在 Windows (Win10 &amp; Win11) 和 Linux (Ubuntu, Fedora, CentOS 8) 环境下完成测试。你可以选择你习惯的操作系统环境作为 Docker 主机， 请根据如下官方文档安装 Docker &amp; Docker-Compose</p>
+<p><a
+  class="gdoc-markdown__link"
+  href="https://docs.docker.com/engine/install/"
+  
+  >docker 安装说明</a
+></p>
+<p><a
+  class="gdoc-markdown__link"
+  href="https://docs.docker.com/compose/install/"
+  
+  >docker-compose 安装说明</a
+></p>
+<div class="gdoc-page__anchorwrap">
+    <h3 id="23-安装">
+        2.3 安装
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/quickstart/quickstart/#23-安装" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 2.3 安装" aria-label="Anchor to: 2.3 安装" href="#23-%e5%ae%89%e8%a3%85">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h3>
+</div>
+<ol>
+<li>
+<p>下载项目</p>
+<p><em>在 Linux 环境中使用</em></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">$ git clone https://github.com/croakexciting/dianshao.git <span class="o">&amp;&amp;</span> <span class="nb">cd</span> ./dianshao
+</code></pre></div><p><em>注意：由于 Bitbake 无法被 root 用户使用，因此请确保项目文件夹权限为 1000：1000</em></p>
+<p><em>在 Windows 环境中使用</em></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">$ git clone https://github.com/croakexciting/dianshao.git -c core.autocrlf<span class="o">=</span><span class="nb">false</span>
+
+$ <span class="nb">cd</span> ./dianshao
+</code></pre></div></li>
+<li>
+<p>设置你的 Yocto Project 项目存放路径</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">$ <span class="nb">export</span> <span class="nv">DIANSHAO_YOCTO_PROJECT_PATH</span><span class="o">=</span><span class="s2">&#34;your yocto project path&#34;</span>
+</code></pre></div><p><em>注意：如果在 Linux 中使用，请确保项目文件夹权限为 1000：1000</em></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">$ sudo chown -R 1000:1000 <span class="nv">$DIANSHAO_YOCTO_PROJECT_PATH</span>
+</code></pre></div><p><em>注意：如果在 Windows 中使用，请打开该文件夹大小写敏感选项</em></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">$ fsutil.exe file setCaseSensitiveInfo <span class="nv">$DIANSHAO_YOCTO_PROJECT_PATH</span> <span class="nb">enable</span>
+</code></pre></div></li>
+<li>
+<p>Docker 镜像编译</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">$ sudo docker-compose build
+</code></pre></div><p><em>注意：如果使用国内网络编译速度过慢，可使用如下命令使用国内镜像源</em></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">$ sudo docker-compose -f docker-compose-with-mirror.yml build
+</code></pre></div></li>
+<li>
+<p>Docker 容器启动</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">$ sudo docker-compose up
+</code></pre></div><p><em>注意：如果使上一步使用国内镜像源，请使用下面命令</em></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">$ sudo docker-compose -f docker-compose-with-mirror.yml up
+</code></pre></div></li>
+</ol>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="3-创建项目">
+        3. 创建项目
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/quickstart/quickstart/#3-创建项目" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 3. 创建项目" aria-label="Anchor to: 3. 创建项目" href="#3-%e5%88%9b%e5%bb%ba%e9%a1%b9%e7%9b%ae">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="4-增加元数据层">
+        4. 增加元数据层
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/quickstart/quickstart/#4-增加元数据层" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 4. 增加元数据层" aria-label="Anchor to: 4. 增加元数据层" href="#4-%e5%a2%9e%e5%8a%a0%e5%85%83%e6%95%b0%e6%8d%ae%e5%b1%82">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="5-增加软件包">
+        5. 增加软件包
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/quickstart/quickstart/#5-增加软件包" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 5. 增加软件包" aria-label="Anchor to: 5. 增加软件包" href="#5-%e5%a2%9e%e5%8a%a0%e8%bd%af%e4%bb%b6%e5%8c%85">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="6-制作镜像文件">
+        6. 制作镜像文件
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/quickstart/quickstart/#6-制作镜像文件" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 6. 制作镜像文件" aria-label="Anchor to: 6. 制作镜像文件" href="#6-%e5%88%b6%e4%bd%9c%e9%95%9c%e5%83%8f%e6%96%87%e4%bb%b6">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="7-编译项目">
+        7. 编译项目
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/quickstart/quickstart/#7-编译项目" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 7. 编译项目" aria-label="Anchor to: 7. 编译项目" href="#7-%e7%bc%96%e8%af%91%e9%a1%b9%e7%9b%ae">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+
+  </article>
 
 
 
