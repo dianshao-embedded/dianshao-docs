@@ -165,7 +165,7 @@
         }
     },
     "url" : "https:\/\/dianshao-embedded.github.io\/dianshao-docs\/quickstart\/introduction\/",
-    "wordCount" : "54",
+    "wordCount" : "71",
     "genre" : [ ]
 }
 </script>
@@ -314,7 +314,14 @@
               
             >
               
-                <span class="flex">入门</span>
+                <span class="flex">
+                  <a
+                    href="/dianshao-docs/quickstart/"
+                    class="gdoc-nav__entry "
+                  >
+                    入门
+                  </a>
+                </span>
               
               
             </label>
@@ -536,6 +543,11 @@
   </div>
 
 
+<p><img
+  src="/dianshao-docs/images/mainpage.png"
+  alt="颠勺"
+  
+/></p>
 <div class="gdoc-page__anchorwrap">
     <h2 id="1-项目特征">
         1. 项目特征
@@ -635,9 +647,11 @@
         </a>
     </h2>
 </div>
+<p>颠勺主要由 <strong>dianshao-web</strong> 和 <strong>dianshao-yocto</strong> 两部分组成。前者负责提供 UI 交互界面，项目管理，包管理，元数据层管理等工作，后者负责项目创建，BBFILE 创建，Bitbake 命令运行等底层工作。正常工作时，<strong>dianshao-web</strong> 下发任务至 <strong>dianshao-yocto</strong>，并实时读取任务状态。另外，Bitbake 任务进程相关状态值由 <strong>dianshao-yocto</strong> 通过 UDP 报文主动上报给 <strong>dianshao-web</strong></p>
+<br>
 <p><img
-  src="/images/architecture.png"
-  alt="Example image"
+  src="/dianshao-docs/images/architecture.png"
+  alt="项目架构"
   
 /></p>
 
