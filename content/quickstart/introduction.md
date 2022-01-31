@@ -5,6 +5,8 @@ weight: 1
 
 {{< toc >}}
 
+![颠勺](/dianshao-docs/images/mainpage.png)
+
 ## 1. 项目特征
 
 - 一个嵌入式 Yocto Linux 终端项目构建管理工具
@@ -33,4 +35,9 @@ weight: 1
 * [JQuery](https://jquery.com)
 
 ## 3. 系统架构
-![Example image](/images/architecture.png)
+
+颠勺主要由 **dianshao-web** 和 **dianshao-yocto** 两部分组成。前者负责提供 UI 交互界面，项目管理，包管理，元数据层管理等工作，后者负责项目创建，BBFILE 创建，Bitbake 命令运行等底层工作。正常工作时，**dianshao-web** 下发任务至 **dianshao-yocto**，并实时读取任务状态。另外，Bitbake 任务进程相关状态值由 **dianshao-yocto** 通过 UDP 报文主动上报给 **dianshao-web**
+
+<br>
+
+![项目架构](/dianshao-docs/images/architecture.png)

@@ -1,8 +1,6 @@
 ---
 title: 入门
 weight: 0
-resources:
-  - name: architecture
-    src: "images/architecture.png"
-    title: architecture
 ---
+
+本章节中将会用几分钟的时间带您感受颠勺
