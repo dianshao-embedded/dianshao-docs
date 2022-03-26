@@ -31,5 +31,4 @@ enableRobotsTXT = true
   geekdocToC = 3
   geekdocTagsToMenu = true
   geekdocRepo = 'https://github.com/dianshao-embedded/dianshao-docs'
-  geekdocEditPath = "/content"
   geekdocImageLazyLoading = true

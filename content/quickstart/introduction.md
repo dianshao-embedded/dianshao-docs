@@ -21,7 +21,6 @@ weight: 1
 
 颠勺主要是基于 Django 开发， 它通过由 Celery + Redis 支持的异步队列发送 bitbake 命令进行编译等操作，另外它使用 Postgresql 作为数据库
 
-
 为了快速可靠的安装部署，颠勺和相关依赖均运行于 Docker 容器之中
 
 * [Bitbake](https://github.com/openembedded/bitbake)
