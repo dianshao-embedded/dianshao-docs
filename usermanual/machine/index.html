@@ -9,13 +9,15 @@
 
 
 
-  <meta name="description" content="Dianshao Docs" />
+  <meta name="description" content="1. 说明 2. u-boot 3. kernel 4. 额外驱动 5. rauc 适配开发 6. machine conf 7. distro conf 8. 总结      1. 说明     正如快速开始章节所说，由于嵌入式 Linux 项目会使用各种各样的芯片和外设，无法归纳和总结成一套固定的程序。因此颠勺目前不提供如下 Yocto 开发的支持：
+ u-boot 包开发 内核包开发 驱动包开发 rauc 适配开发 machine 配置文件 distro 配置文件  对于开发嵌入式 Linux 项目来说，所有的底层工作 90% 以上是移植。通常来说，开发人员的主要工作是根据需求修改 u-boot 和内核 config 文件并编译，增加额外驱动，修改设备树。 Yocto 提供了丰富的底层软件包，用户一般只需要根据需求做少量的改动即可完成，降低移植难度，后续例程中会简单介绍颠勺项目如何进行底层移植。
+2. u-boot       对于常用芯片，可以使用 openembedded-core/meta/recipes-bsp/u-boot 包，该包使用的是 u-boot 官方仓库。也可以使用芯片厂商提供的元数据层中的 u-boot 包，例如 imx 系列芯片，可以使用 u-boot-imx" />
 
 
 
     <title>
       
-        用户手册 | 
+        底层开发 | 
       Dianshao Docs
     </title>
 
@@ -35,15 +37,21 @@
 
     
 
-    <meta property="og:title" content="用户手册" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://dianshao-embedded.github.io/dianshao-docs/usermanual/" />
+    <meta property="og:title" content="底层开发" />
+<meta property="og:description" content="1. 说明 2. u-boot 3. kernel 4. 额外驱动 5. rauc 适配开发 6. machine conf 7. distro conf 8. 总结      1. 说明     正如快速开始章节所说，由于嵌入式 Linux 项目会使用各种各样的芯片和外设，无法归纳和总结成一套固定的程序。因此颠勺目前不提供如下 Yocto 开发的支持：
+ u-boot 包开发 内核包开发 驱动包开发 rauc 适配开发 machine 配置文件 distro 配置文件  对于开发嵌入式 Linux 项目来说，所有的底层工作 90% 以上是移植。通常来说，开发人员的主要工作是根据需求修改 u-boot 和内核 config 文件并编译，增加额外驱动，修改设备树。 Yocto 提供了丰富的底层软件包，用户一般只需要根据需求做少量的改动即可完成，降低移植难度，后续例程中会简单介绍颠勺项目如何进行底层移植。
+2. u-boot       对于常用芯片，可以使用 openembedded-core/meta/recipes-bsp/u-boot 包，该包使用的是 u-boot 官方仓库。也可以使用芯片厂商提供的元数据层中的 u-boot 包，例如 imx 系列芯片，可以使用 u-boot-imx" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dianshao-embedded.github.io/dianshao-docs/usermanual/machine/" /><meta property="article:section" content="usermanual" />
+
+
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="用户手册"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="底层开发"/>
+<meta name="twitter:description" content="1. 说明 2. u-boot 3. kernel 4. 额外驱动 5. rauc 适配开发 6. machine conf 7. distro conf 8. 总结      1. 说明     正如快速开始章节所说，由于嵌入式 Linux 项目会使用各种各样的芯片和外设，无法归纳和总结成一套固定的程序。因此颠勺目前不提供如下 Yocto 开发的支持：
+ u-boot 包开发 内核包开发 驱动包开发 rauc 适配开发 machine 配置文件 distro 配置文件  对于开发嵌入式 Linux 项目来说，所有的底层工作 90% 以上是移植。通常来说，开发人员的主要工作是根据需求修改 u-boot 和内核 config 文件并编译，增加额外驱动，修改设备树。 Yocto 提供了丰富的底层软件包，用户一般只需要根据需求做少量的改动即可完成，降低移植难度，后续例程中会简单介绍颠勺项目如何进行底层移植。
+2. u-boot       对于常用芯片，可以使用 openembedded-core/meta/recipes-bsp/u-boot 包，该包使用的是 u-boot 官方仓库。也可以使用芯片厂商提供的元数据层中的 u-boot 包，例如 imx 系列芯片，可以使用 u-boot-imx"/>
 
 
     <script src="/dianshao-docs/js/main-b1609106.bundle.min.js"></script>
@@ -112,6 +120,44 @@
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
     
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "TechArticle",
+    "articleSection": "usermanual",
+    "name": "底层开发",
+    "headline": "底层开发",
+    "alternativeHeadline": "",
+    "description": "1. 说明 2. u-boot 3. kernel 4. 额外驱动 5. rauc 适配开发 6. machine conf 7. distro conf 8. 总结      1. 说明     正如快速开始章节所说，由于嵌入式 Linux 项目会使用各种各样的芯片和外设，无法归纳和总结成一套固定的程序。因此颠勺目前不提供如下 Yocto 开发的支持：\n u-boot 包开发 内核包开发 驱动包开发 rauc 适配开发 machine 配置文件 distro 配置文件  对于开发嵌入式 Linux 项目来说，所有的底层工作 90% 以上是移植。通常来说，开发人员的主要工作是根据需求修改 u-boot 和内核 config 文件并编译，增加额外驱动，修改设备树。 Yocto 提供了丰富的底层软件包，用户一般只需要根据需求做少量的改动即可完成，降低移植难度，后续例程中会简单介绍颠勺项目如何进行底层移植。\n2. u-boot       对于常用芯片，可以使用 openembedded-core\/meta\/recipes-bsp\/u-boot 包，该包使用的是 u-boot 官方仓库。也可以使用芯片厂商提供的元数据层中的 u-boot 包，例如 imx 系列芯片，可以使用 u-boot-imx",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https:\/\/dianshao-embedded.github.io\/dianshao-docs\/usermanual\/machine\/"
+    },
+    "copyrightHolder" : "Dianshao Docs",
+    "copyrightYear" : "0001",
+    "dateCreated": "0001-01-01T00:00:00.00Z",
+    "datePublished": "0001-01-01T00:00:00.00Z",
+    "dateModified": "0001-01-01T00:00:00.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "Dianshao Docs",
+        "url": "https://dianshao-embedded.github.io/dianshao-docs/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/dianshao-embedded.github.io\/dianshao-docs\/brand.svg",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "url" : "https:\/\/dianshao-embedded.github.io\/dianshao-docs\/usermanual\/machine\/",
+    "wordCount" : "140",
+    "genre" : [ ]
+}
+</script>
+
 
     
 
@@ -537,7 +583,7 @@
                 <span class="flex">
                   <a
                     href="/dianshao-docs/usermanual/machine/"
-                    class="gdoc-nav__entry "
+                    class="gdoc-nav__entry is-active"
                   >
                     底层开发
                   </a>
@@ -952,7 +998,15 @@
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/dianshao-docs/' href='/dianshao-docs/'><span itemprop='name'>欢迎使用颠勺</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>用户手册</span><meta itemprop='position' content='3' /></li>
+    
+    
+    
+    
+  
+  
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/dianshao-docs/' href='/dianshao-docs/'><span itemprop='name'>欢迎使用颠勺</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/dianshao-docs/usermanual/' href='/dianshao-docs/usermanual/'><span itemprop='name'>用户手册</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>底层开发</span><meta itemprop='position' content='4' /></li>
+  
+
   
 
   
@@ -968,8 +1022,145 @@
   <article
     class="gdoc-markdown gdoc-markdown__align--left"
   >
-    <h1>用户手册</h1>
+    <h1>底层开发</h1>
     
+
+
+  <div class="gdoc-toc gdoc-toc__level--3">
+    <nav id="TableOfContents"><ul>
+        <li><a href="#1-说明">1. 说明</a></li>
+        <li><a href="#2-u-boot">2. u-boot</a></li>
+        <li><a href="#3-kernel">3. kernel</a></li>
+        <li><a href="#4-额外驱动">4. 额外驱动</a></li>
+        <li><a href="#5-rauc-适配开发">5. rauc 适配开发</a></li>
+        <li><a href="#6-machine-conf">6. machine conf</a></li>
+        <li><a href="#7-distro-conf">7. distro conf</a></li>
+        <li><a href="#8-总结">8. 总结</a></li>
+      </ul></nav>
+    <hr />
+  </div>
+
+
+<div class="gdoc-page__anchorwrap">
+    <h2 id="1-说明">
+        1. 说明
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/machine/#1-说明" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 1. 说明" aria-label="Anchor to: 1. 说明" href="#1-%e8%af%b4%e6%98%8e">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>正如快速开始章节所说，由于嵌入式 Linux 项目会使用各种各样的芯片和外设，无法归纳和总结成一套固定的程序。因此颠勺目前不提供如下 Yocto 开发的支持：</p>
+<ol>
+<li>u-boot 包开发</li>
+<li>内核包开发</li>
+<li>驱动包开发</li>
+<li>rauc 适配开发</li>
+<li>machine 配置文件</li>
+<li>distro 配置文件</li>
+</ol>
+<p>对于开发嵌入式 Linux 项目来说，所有的底层工作 90% 以上是移植。通常来说，开发人员的主要工作是根据需求修改 u-boot 和内核 config 文件并编译，增加额外驱动，修改设备树。
+Yocto 提供了丰富的底层软件包，用户一般只需要根据需求做少量的改动即可完成，降低移植难度，后续例程中会简单介绍颠勺项目如何进行底层移植。</p>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="2-u-boot">
+        2. u-boot
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/machine/#2-u-boot" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 2. u-boot" aria-label="Anchor to: 2. u-boot" href="#2-u-boot">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<ul>
+<li>
+<p>对于常用芯片，可以使用 openembedded-core/meta/recipes-bsp/u-boot 包，该包使用的是 u-boot 官方仓库。也可以使用芯片厂商提供的元数据层中的 u-boot 包，例如 imx 系列芯片，可以使用 u-boot-imx</p>
+</li>
+<li>
+<p>通常用户只需要修改 config 文件，增加 dts 文件即可，无需过多修改即可完成移植</p>
+</li>
+<li>
+<p>如果需要打补丁也很简单，具体方式请参考 yocto 文档，本文不再赘述</p>
+</li>
+</ul>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="3-kernel">
+        3. kernel
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/machine/#3-kernel" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 3. kernel" aria-label="Anchor to: 3. kernel" href="#3-kernel">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<ul>
+<li>同 u-boot 一样，通常只需修改 config 文件，增加 dts 文件即可，无需过多修改即可完成移植</li>
+</ul>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="4-额外驱动">
+        4. 额外驱动
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/machine/#4-额外驱动" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 4. 额外驱动" aria-label="Anchor to: 4. 额外驱动" href="#4-%e9%a2%9d%e5%a4%96%e9%a9%b1%e5%8a%a8">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<ul>
+<li>如果你需要增加内核中没有的驱动，Yocto 也提供了方法添加用户驱动，并可使其开机自动加载，具体方法请参考 yocto 文档</li>
+</ul>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="5-rauc-适配开发">
+        5. rauc 适配开发
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/machine/#5-rauc-适配开发" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 5. rauc 适配开发" aria-label="Anchor to: 5. rauc 适配开发" href="#5-rauc-%e9%80%82%e9%85%8d%e5%bc%80%e5%8f%91">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<ul>
+<li>由于嵌入式 Linux 终端可能使用的存储方法多样，如 nand nor sd emmc 等，且使用的文件系统也不相同，因此需要根据需求增加 rauc bbappend 适配。具体方法请参考 rauc 官方文档。如果你不需要使用 rauc 升级，那可以跳过此步。</li>
+</ul>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="6-machine-conf">
+        6. machine conf
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/machine/#6-machine-conf" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 6. machine conf" aria-label="Anchor to: 6. machine conf" href="#6-machine-conf">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<ul>
+<li>
+<p>通常，主流芯片厂商和开发板均已提供较为完善的 machine conf, 用户只需根据需求少量修改 machine conf 文件即可</p>
+</li>
+<li>
+<p>用户也可自己开发 machine conf, 具体方式请参考 yocto 官方文档</p>
+</li>
+</ul>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="7-distro-conf">
+        7. distro conf
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/machine/#7-distro-conf" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 7. distro conf" aria-label="Anchor to: 7. distro conf" href="#7-distro-conf">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<ul>
+<li>
+<p>颠勺会默认创建 distro conf, 使用 systemd 作为启动方式，使用 rauc 进行升级</p>
+</li>
+<li>
+<p>你也可以根据需求在默认配置上增加，也可以自己新建配置文件并使用，具体方法参考 yocto 官方文档</p>
+</li>
+</ul>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="8-总结">
+        8. 总结
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/machine/#8-总结" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 8. 总结" aria-label="Anchor to: 8. 总结" href="#8-%e6%80%bb%e7%bb%93">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<ul>
+<li>
+<p>总的来说，该部分开发需要开发人员掌握 yocto 开发框架和嵌入式 Linux 底层移植开发知识，因此需要经验丰富的开发人员完成该部分工作。我也尝试过归纳总结成一段程序，但是真的很难实现。</p>
+</li>
+<li>
+<p>由于 yocto 框架的复用性层级之间的解耦做的很好，底层开发者只需关心与硬件平台适配即可，因此一个专职底层开发人员可以配合很多具体项目。例如公司常用芯片一般也就三四种，底层开发人员只需完成针对这几种芯片的底层移植开发，以及根据实际项目需求修改外设相关部分，就可以支撑几十上百个实际项目</p>
+</li>
+</ul>
+
   </article>
 
 

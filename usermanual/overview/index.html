@@ -9,13 +9,17 @@
 
 
 
-  <meta name="description" content="Dianshao Docs" />
+  <meta name="description" content="1. 项目背景 2. 项目范围 3. 开发流程      1. 项目背景     颠勺平台是一个嵌入式 Yocto Linux 终端项目构建管理工具，具有以下特征
+ 提供 BBFILE 自动生成功能降低开发 Yocto 项目的难度，对初学者友好 提供标准化的嵌入式 Linux 项目开发管理流程，提高嵌入式终端项目的可维护性 提供 Yocto 项目模板导入导出功能，用标准化的项目模板加速开发 项目运行于 Docker 容器之上，可跨平台部署（Linux、Windows），部署简便  开发该项目的初衷是为了帮助自己更方便的开发 Yocto 项目，同时方便嵌入式开发团队协同开发。
+2. 项目范围     由于 Yocto-Linux 开发过程复杂，不容易归纳。因此颠勺项目只帮助用户构建文件系统，包括文件系统构建以及其中包含的所有软件，而不涉及内核、驱动及u-boot
+ 应用软件包自动构建（非内核、驱动、u-boot 软件） 文件系统自动构建 镜像及升级包自动构建  3. 开发流程     使用颠勺开发 Yocto 项目主要分为四步，详情参考后续章节
+  创建 Yocto 项目，并根据需求增加相应的元数据层，默认创建的 Yocto 项目中包括 bitbake, meta-yocto, meta-openembedded, meta-rauc" />
 
 
 
     <title>
       
-        1. 概述 | 
+        概述 | 
       Dianshao Docs
     </title>
 
@@ -35,8 +39,12 @@
 
     
 
-    <meta property="og:title" content="1. 概述" />
-<meta property="og:description" content="" />
+    <meta property="og:title" content="概述" />
+<meta property="og:description" content="1. 项目背景 2. 项目范围 3. 开发流程      1. 项目背景     颠勺平台是一个嵌入式 Yocto Linux 终端项目构建管理工具，具有以下特征
+ 提供 BBFILE 自动生成功能降低开发 Yocto 项目的难度，对初学者友好 提供标准化的嵌入式 Linux 项目开发管理流程，提高嵌入式终端项目的可维护性 提供 Yocto 项目模板导入导出功能，用标准化的项目模板加速开发 项目运行于 Docker 容器之上，可跨平台部署（Linux、Windows），部署简便  开发该项目的初衷是为了帮助自己更方便的开发 Yocto 项目，同时方便嵌入式开发团队协同开发。
+2. 项目范围     由于 Yocto-Linux 开发过程复杂，不容易归纳。因此颠勺项目只帮助用户构建文件系统，包括文件系统构建以及其中包含的所有软件，而不涉及内核、驱动及u-boot
+ 应用软件包自动构建（非内核、驱动、u-boot 软件） 文件系统自动构建 镜像及升级包自动构建  3. 开发流程     使用颠勺开发 Yocto 项目主要分为四步，详情参考后续章节
+  创建 Yocto 项目，并根据需求增加相应的元数据层，默认创建的 Yocto 项目中包括 bitbake, meta-yocto, meta-openembedded, meta-rauc" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dianshao-embedded.github.io/dianshao-docs/usermanual/overview/" /><meta property="article:section" content="usermanual" />
 
@@ -44,8 +52,12 @@
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="1. 概述"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="概述"/>
+<meta name="twitter:description" content="1. 项目背景 2. 项目范围 3. 开发流程      1. 项目背景     颠勺平台是一个嵌入式 Yocto Linux 终端项目构建管理工具，具有以下特征
+ 提供 BBFILE 自动生成功能降低开发 Yocto 项目的难度，对初学者友好 提供标准化的嵌入式 Linux 项目开发管理流程，提高嵌入式终端项目的可维护性 提供 Yocto 项目模板导入导出功能，用标准化的项目模板加速开发 项目运行于 Docker 容器之上，可跨平台部署（Linux、Windows），部署简便  开发该项目的初衷是为了帮助自己更方便的开发 Yocto 项目，同时方便嵌入式开发团队协同开发。
+2. 项目范围     由于 Yocto-Linux 开发过程复杂，不容易归纳。因此颠勺项目只帮助用户构建文件系统，包括文件系统构建以及其中包含的所有软件，而不涉及内核、驱动及u-boot
+ 应用软件包自动构建（非内核、驱动、u-boot 软件） 文件系统自动构建 镜像及升级包自动构建  3. 开发流程     使用颠勺开发 Yocto 项目主要分为四步，详情参考后续章节
+  创建 Yocto 项目，并根据需求增加相应的元数据层，默认创建的 Yocto 项目中包括 bitbake, meta-yocto, meta-openembedded, meta-rauc"/>
 
 
     <script src="/dianshao-docs/js/main-b1609106.bundle.min.js"></script>
@@ -120,9 +132,10 @@
     "@context": "http://schema.org",
     "@type": "TechArticle",
     "articleSection": "usermanual",
-    "name": "1. 概述",
-    "headline": "1. 概述",
+    "name": "概述",
+    "headline": "概述",
     "alternativeHeadline": "",
+    "description": "1. 项目背景 2. 项目范围 3. 开发流程      1. 项目背景     颠勺平台是一个嵌入式 Yocto Linux 终端项目构建管理工具，具有以下特征\n 提供 BBFILE 自动生成功能降低开发 Yocto 项目的难度，对初学者友好 提供标准化的嵌入式 Linux 项目开发管理流程，提高嵌入式终端项目的可维护性 提供 Yocto 项目模板导入导出功能，用标准化的项目模板加速开发 项目运行于 Docker 容器之上，可跨平台部署（Linux、Windows），部署简便  开发该项目的初衷是为了帮助自己更方便的开发 Yocto 项目，同时方便嵌入式开发团队协同开发。\n2. 项目范围     由于 Yocto-Linux 开发过程复杂，不容易归纳。因此颠勺项目只帮助用户构建文件系统，包括文件系统构建以及其中包含的所有软件，而不涉及内核、驱动及u-boot\n 应用软件包自动构建（非内核、驱动、u-boot 软件） 文件系统自动构建 镜像及升级包自动构建  3. 开发流程     使用颠勺开发 Yocto 项目主要分为四步，详情参考后续章节\n  创建 Yocto 项目，并根据需求增加相应的元数据层，默认创建的 Yocto 项目中包括 bitbake, meta-yocto, meta-openembedded, meta-rauc",
     "inLanguage": "en",
     "isFamilyFriendly": "true",
     "mainEntityOfPage": {
@@ -146,7 +159,7 @@
         }
     },
     "url" : "https:\/\/dianshao-embedded.github.io\/dianshao-docs\/usermanual\/overview\/",
-    "wordCount" : "0",
+    "wordCount" : "69",
     "genre" : [ ]
 }
 </script>
@@ -413,6 +426,522 @@
       
         
       
+    
+      
+
+      
+        
+      
+
+      
+        
+
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">用户手册</span>
+              
+              
+            </label>
+
+            
+              
+  
+
+
+  <ul class="gdoc-nav__list">
+    
+    
+      
+
+      
+        
+      
+
+      
+        
+
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/dianshao-docs/usermanual/overview/"
+                    class="gdoc-nav__entry is-active"
+                  >
+                    概述
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+    
+      
+
+      
+        
+      
+
+      
+        
+
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/dianshao-docs/usermanual/project/"
+                    class="gdoc-nav__entry "
+                  >
+                    项目
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+    
+      
+
+      
+        
+      
+
+      
+        
+
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/dianshao-docs/usermanual/machine/"
+                    class="gdoc-nav__entry "
+                  >
+                    底层开发
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+    
+      
+
+      
+        
+      
+
+      
+        
+
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/dianshao-docs/usermanual/package/"
+                    class="gdoc-nav__entry "
+                  >
+                    软件包
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+    
+      
+
+      
+        
+      
+
+      
+        
+
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/dianshao-docs/usermanual/image/"
+                    class="gdoc-nav__entry "
+                  >
+                    镜像
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+    
+  </ul>
+
+            
+          </li>
+        
+      
+    
+      
+
+      
+        
+      
+
+      
+        
+      
+    
+      
+
+      
+        
+      
+
+      
+        
+
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/dianshao-docs/lora-gateway/"
+                    class="gdoc-nav__entry "
+                  >
+                    实例一
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+              
+  
+
+
+  <ul class="gdoc-nav__list">
+    
+    
+      
+
+      
+        
+      
+
+      
+        
+
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/dianshao-docs/lora-gateway/project/"
+                    class="gdoc-nav__entry "
+                  >
+                    创建项目
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+    
+      
+
+      
+        
+      
+
+      
+        
+
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/dianshao-docs/lora-gateway/machine/"
+                    class="gdoc-nav__entry "
+                  >
+                    底层开发
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+    
+      
+
+      
+        
+      
+
+      
+        
+
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/dianshao-docs/lora-gateway/package/"
+                    class="gdoc-nav__entry "
+                  >
+                    软件包
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+    
+      
+
+      
+        
+      
+
+      
+        
+
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">
+                  <a
+                    href="/dianshao-docs/lora-gateway/image/"
+                    class="gdoc-nav__entry "
+                  >
+                    镜像
+                  </a>
+                </span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+    
+  </ul>
+
+            
+          </li>
         
       
     
@@ -455,7 +984,7 @@
   
     justify-between
   
-  
+  hidden-mobile
   "
   itemprop="breadcrumb"
 >
@@ -481,7 +1010,7 @@
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/dianshao-docs/' href='/dianshao-docs/'><span itemprop='name'>欢迎使用颠勺</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/dianshao-docs/usermanual/' href='/dianshao-docs/usermanual/'><span itemprop='name'>用户手册</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>1. 概述</span><meta itemprop='position' content='4' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/dianshao-docs/' href='/dianshao-docs/'><span itemprop='name'>欢迎使用颠勺</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/dianshao-docs/usermanual/' href='/dianshao-docs/usermanual/'><span itemprop='name'>用户手册</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>概述</span><meta itemprop='position' content='4' /></li>
   
 
   
@@ -492,17 +1021,6 @@
     </div>
   
   
-    <div>
-      <span class="editpage">
-        <svg class="icon gdoc_code"><use xlink:href="#gdoc_code"></use></svg>
-        <a
-          href="https://github.com/dianshao-embedded/dianshao-docs//content/usermanual/overview.md"
-        >
-          Edit page
-        </a>
-      </span>
-    </div>
-  
 </div>
 
 
@@ -510,8 +1028,74 @@
   <article
     class="gdoc-markdown gdoc-markdown__align--left"
   >
-    <h1>1. 概述</h1>
+    <h1>概述</h1>
     
+
+
+  <div class="gdoc-toc gdoc-toc__level--3">
+    <nav id="TableOfContents"><ul>
+        <li><a href="#1-项目背景">1. 项目背景</a></li>
+        <li><a href="#2-项目范围">2. 项目范围</a></li>
+        <li><a href="#3-开发流程">3. 开发流程</a></li>
+      </ul></nav>
+    <hr />
+  </div>
+
+
+<div class="gdoc-page__anchorwrap">
+    <h2 id="1-项目背景">
+        1. 项目背景
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/overview/#1-项目背景" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 1. 项目背景" aria-label="Anchor to: 1. 项目背景" href="#1-%e9%a1%b9%e7%9b%ae%e8%83%8c%e6%99%af">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>颠勺平台是一个嵌入式 Yocto Linux 终端项目构建管理工具，具有以下特征</p>
+<ul>
+<li>提供 BBFILE 自动生成功能降低开发 Yocto 项目的难度，<strong>对初学者友好</strong></li>
+<li>提供标准化的嵌入式 Linux 项目开发管理流程，提高嵌入式终端项目的可维护性</li>
+<li>提供 Yocto 项目模板导入导出功能，用标准化的项目模板加速开发</li>
+<li>项目运行于 Docker 容器之上，可跨平台部署（Linux、Windows），部署简便</li>
+</ul>
+<p>开发该项目的初衷是为了帮助自己更方便的开发 Yocto 项目，同时方便嵌入式开发团队协同开发。</p>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="2-项目范围">
+        2. 项目范围
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/overview/#2-项目范围" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 2. 项目范围" aria-label="Anchor to: 2. 项目范围" href="#2-%e9%a1%b9%e7%9b%ae%e8%8c%83%e5%9b%b4">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>由于 Yocto-Linux 开发过程复杂，不容易归纳。因此颠勺项目只帮助用户构建文件系统，包括文件系统构建以及其中包含的所有软件，而不涉及内核、驱动及u-boot</p>
+<ul>
+<li>应用软件包自动构建（非内核、驱动、u-boot 软件）</li>
+<li>文件系统自动构建</li>
+<li>镜像及升级包自动构建</li>
+</ul>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="3-开发流程">
+        3. 开发流程
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/overview/#3-开发流程" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 3. 开发流程" aria-label="Anchor to: 3. 开发流程" href="#3-%e5%bc%80%e5%8f%91%e6%b5%81%e7%a8%8b">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>使用颠勺开发 Yocto 项目主要分为四步，详情参考后续章节</p>
+<ol>
+<li>
+<p>创建 Yocto 项目，并根据需求增加相应的元数据层，默认创建的 Yocto 项目中包括 bitbake, meta-yocto, meta-openembedded, meta-rauc</p>
+</li>
+<li>
+<p>在新建的 Yocto 项目中开发 u-boot, 内核，驱动，rauc bbappend, machine conf 等底层软件包。开发方式完全按照 Yocto 项目说明即可，颠勺不提供该部分相关功能。</p>
+</li>
+<li>
+<p>在颠勺 MyPackage 中添加用户应用层软件包</p>
+</li>
+<li>
+<p>在颠勺 MyImage 中添加镜像配置，由于制作文件系统、镜像以及升级包</p>
+</li>
+</ol>
+
   </article>
 
 

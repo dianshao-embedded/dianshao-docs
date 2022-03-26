@@ -9,13 +9,16 @@
 
 
 
-  <meta name="description" content="Dianshao Docs" />
+  <meta name="description" content="1. 说明 2. 创建 3. 参数设置 4. 增加本地文件 5. 增加任务 6. 增加额外宏定义 7. 生成 bbfile      1. 说明     颠勺提供 MyPakcage 功能帮助开发者快速的创建 yocto 包，包括以下功能
+ 自动生成 yocto bb/bbappend file 生成并添加包所需额外文件，如配置文件、systemd service 文件等 生成并添加软件项目补丁  目前支持 C/C&#43;&#43; golang 两种编程语言软件项目 yocto 包的制作
+2. 创建     点击 New Package 创建包，填写包必要信息
+ Version: 请保持和软件版本相同，用于拉取正确版本软件 Type: 是 yocto bb 包还是 bbappend 包 Language: 编程语言是 C/C&#43;&#43; 还是 Golang Download Method: 源码仓库下载方式选择 Initial Method: 软件启动方式选择，目前仅支持 Systemd  3." />
 
 
 
     <title>
       
-        用户手册 | 
+        软件包 | 
       Dianshao Docs
     </title>
 
@@ -35,15 +38,23 @@
 
     
 
-    <meta property="og:title" content="用户手册" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://dianshao-embedded.github.io/dianshao-docs/usermanual/" />
+    <meta property="og:title" content="软件包" />
+<meta property="og:description" content="1. 说明 2. 创建 3. 参数设置 4. 增加本地文件 5. 增加任务 6. 增加额外宏定义 7. 生成 bbfile      1. 说明     颠勺提供 MyPakcage 功能帮助开发者快速的创建 yocto 包，包括以下功能
+ 自动生成 yocto bb/bbappend file 生成并添加包所需额外文件，如配置文件、systemd service 文件等 生成并添加软件项目补丁  目前支持 C/C&#43;&#43; golang 两种编程语言软件项目 yocto 包的制作
+2. 创建     点击 New Package 创建包，填写包必要信息
+ Version: 请保持和软件版本相同，用于拉取正确版本软件 Type: 是 yocto bb 包还是 bbappend 包 Language: 编程语言是 C/C&#43;&#43; 还是 Golang Download Method: 源码仓库下载方式选择 Initial Method: 软件启动方式选择，目前仅支持 Systemd  3." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dianshao-embedded.github.io/dianshao-docs/usermanual/package/" /><meta property="article:section" content="usermanual" />
+
+
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="用户手册"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="软件包"/>
+<meta name="twitter:description" content="1. 说明 2. 创建 3. 参数设置 4. 增加本地文件 5. 增加任务 6. 增加额外宏定义 7. 生成 bbfile      1. 说明     颠勺提供 MyPakcage 功能帮助开发者快速的创建 yocto 包，包括以下功能
+ 自动生成 yocto bb/bbappend file 生成并添加包所需额外文件，如配置文件、systemd service 文件等 生成并添加软件项目补丁  目前支持 C/C&#43;&#43; golang 两种编程语言软件项目 yocto 包的制作
+2. 创建     点击 New Package 创建包，填写包必要信息
+ Version: 请保持和软件版本相同，用于拉取正确版本软件 Type: 是 yocto bb 包还是 bbappend 包 Language: 编程语言是 C/C&#43;&#43; 还是 Golang Download Method: 源码仓库下载方式选择 Initial Method: 软件启动方式选择，目前仅支持 Systemd  3."/>
 
 
     <script src="/dianshao-docs/js/main-b1609106.bundle.min.js"></script>
@@ -112,6 +123,44 @@
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
     
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "TechArticle",
+    "articleSection": "usermanual",
+    "name": "软件包",
+    "headline": "软件包",
+    "alternativeHeadline": "",
+    "description": "1. 说明 2. 创建 3. 参数设置 4. 增加本地文件 5. 增加任务 6. 增加额外宏定义 7. 生成 bbfile      1. 说明     颠勺提供 MyPakcage 功能帮助开发者快速的创建 yocto 包，包括以下功能\n 自动生成 yocto bb\/bbappend file 生成并添加包所需额外文件，如配置文件、systemd service 文件等 生成并添加软件项目补丁  目前支持 C\/C\u002b\u002b golang 两种编程语言软件项目 yocto 包的制作\n2. 创建     点击 New Package 创建包，填写包必要信息\n Version: 请保持和软件版本相同，用于拉取正确版本软件 Type: 是 yocto bb 包还是 bbappend 包 Language: 编程语言是 C\/C\u002b\u002b 还是 Golang Download Method: 源码仓库下载方式选择 Initial Method: 软件启动方式选择，目前仅支持 Systemd  3.",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https:\/\/dianshao-embedded.github.io\/dianshao-docs\/usermanual\/package\/"
+    },
+    "copyrightHolder" : "Dianshao Docs",
+    "copyrightYear" : "0001",
+    "dateCreated": "0001-01-01T00:00:00.00Z",
+    "datePublished": "0001-01-01T00:00:00.00Z",
+    "dateModified": "0001-01-01T00:00:00.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "Dianshao Docs",
+        "url": "https://dianshao-embedded.github.io/dianshao-docs/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/dianshao-embedded.github.io\/dianshao-docs\/brand.svg",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "url" : "https:\/\/dianshao-embedded.github.io\/dianshao-docs\/usermanual\/package\/",
+    "wordCount" : "224",
+    "genre" : [ ]
+}
+</script>
+
 
     
 
@@ -582,7 +631,7 @@
                 <span class="flex">
                   <a
                     href="/dianshao-docs/usermanual/package/"
-                    class="gdoc-nav__entry "
+                    class="gdoc-nav__entry is-active"
                   >
                     软件包
                   </a>
@@ -952,7 +1001,15 @@
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/dianshao-docs/' href='/dianshao-docs/'><span itemprop='name'>欢迎使用颠勺</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>用户手册</span><meta itemprop='position' content='3' /></li>
+    
+    
+    
+    
+  
+  
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/dianshao-docs/' href='/dianshao-docs/'><span itemprop='name'>欢迎使用颠勺</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/dianshao-docs/usermanual/' href='/dianshao-docs/usermanual/'><span itemprop='name'>用户手册</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>软件包</span><meta itemprop='position' content='4' /></li>
+  
+
   
 
   
@@ -968,8 +1025,124 @@
   <article
     class="gdoc-markdown gdoc-markdown__align--left"
   >
-    <h1>用户手册</h1>
+    <h1>软件包</h1>
     
+
+
+  <div class="gdoc-toc gdoc-toc__level--3">
+    <nav id="TableOfContents"><ul>
+        <li><a href="#1-说明">1. 说明</a></li>
+        <li><a href="#2-创建">2. 创建</a></li>
+        <li><a href="#3-参数设置">3. 参数设置</a></li>
+        <li><a href="#4-增加本地文件">4. 增加本地文件</a></li>
+        <li><a href="#5-增加任务">5. 增加任务</a></li>
+        <li><a href="#6-增加额外宏定义">6. 增加额外宏定义</a></li>
+        <li><a href="#7-生成-bbfile">7. 生成 bbfile</a></li>
+      </ul></nav>
+    <hr />
+  </div>
+
+
+<div class="gdoc-page__anchorwrap">
+    <h2 id="1-说明">
+        1. 说明
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/package/#1-说明" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 1. 说明" aria-label="Anchor to: 1. 说明" href="#1-%e8%af%b4%e6%98%8e">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>颠勺提供 MyPakcage 功能帮助开发者快速的创建 yocto 包，包括以下功能</p>
+<ul>
+<li>自动生成 yocto bb/bbappend file</li>
+<li>生成并添加包所需额外文件，如配置文件、systemd service 文件等</li>
+<li>生成并添加软件项目补丁</li>
+</ul>
+<p>目前支持 C/C++ golang 两种编程语言软件项目 yocto 包的制作</p>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="2-创建">
+        2. 创建
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/package/#2-创建" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 2. 创建" aria-label="Anchor to: 2. 创建" href="#2-%e5%88%9b%e5%bb%ba">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>点击 New Package 创建包，填写包必要信息</p>
+<ul>
+<li>Version: 请保持和软件版本相同，用于拉取正确版本软件</li>
+<li>Type: 是 yocto bb 包还是 bbappend 包</li>
+<li>Language: 编程语言是 C/C++ 还是 Golang</li>
+<li>Download Method: 源码仓库下载方式选择</li>
+<li>Initial Method: 软件启动方式选择，目前仅支持 Systemd</li>
+</ul>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="3-参数设置">
+        3. 参数设置
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/package/#3-参数设置" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 3. 参数设置" aria-label="Anchor to: 3. 参数设置" href="#3-%e5%8f%82%e6%95%b0%e8%ae%be%e7%bd%ae">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>用户需要填写下列参数，颠勺会根据这些参数生成 bbfile</p>
+<ul>
+<li>GORPOXY: 配置 golang 项目编译时的 go module 代理</li>
+<li>Extra Golang Env Variable: 除了 GOROOT GOOS GOARCH GOARM GOCACHE GOPROXY 之外的 GO 环境变量</li>
+<li>Extra Oemake: 对应 yocto 变量 $EXTRA_OEMAKE, 详细说明请参考 yocto 文档</li>
+<li>Source Directory: 源码目录，例如使用 git 方式拉取，就是 $WORKDIR/git</li>
+<li>Depends：包依赖，yocto 概念，详细说明请参考 yocto 文档</li>
+<li>Inherit：包继承，yocto 概念，详细说明请参考 yocto 文档</li>
+<li>Service Auto Enable：systemd 服务自动启动选项</li>
+<li>Service File Name: systemd service 文件名称</li>
+<li>Src Url: 源码仓库下载地址</li>
+<li>Src Revision: 拉取 git 仓库时，如果仓库没有 tag, 则需要填写 commit 版本号</li>
+<li>Src Url Md5: 通过 wget 拉取文件时，需要填写文件 md5 校验</li>
+<li>Src Url Sha256: 通过 wget 拉取文件时，需要填写文件 sha256 校验</li>
+</ul>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="4-增加本地文件">
+        4. 增加本地文件
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/package/#4-增加本地文件" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 4. 增加本地文件" aria-label="Anchor to: 4. 增加本地文件" href="#4-%e5%a2%9e%e5%8a%a0%e6%9c%ac%e5%9c%b0%e6%96%87%e4%bb%b6">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>构建 yocto 包时经常需要增加本地文件到文件系统，例如 systemd service 文件，例如补丁</p>
+<ul>
+<li>create new files: 增加一个新的文件，点开后，输入文件名以及文件内容</li>
+<li>create patch: 增加一个源码补丁，点开后，输入补丁名称，源码项目中路径，以及修改前后内容</li>
+</ul>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="5-增加任务">
+        5. 增加任务
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/package/#5-增加任务" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 5. 增加任务" aria-label="Anchor to: 5. 增加任务" href="#5-%e5%a2%9e%e5%8a%a0%e4%bb%bb%e5%8a%a1">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>bbfile 中有 config, build, install 三种任务，用户添加后，颠勺会将其加到 bbfile 中</p>
+<ul>
+<li>add original task: 该功能含义为增加一个 bbfile 原始任务，即颠勺会将该行原封不动的写入 bbfile 中。可选 config, build, install 三种任务，可选 prepend, none, append 三种子类型</li>
+<li>add install task: bbfile 中有较多将文件安装于文件系统某处的 install 任务，使用该功能可以简化任务填写，只需填写文件名，源路径，安装路径，权限</li>
+</ul>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="6-增加额外宏定义">
+        6. 增加额外宏定义
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/package/#6-增加额外宏定义" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 6. 增加额外宏定义" aria-label="Anchor to: 6. 增加额外宏定义" href="#6-%e5%a2%9e%e5%8a%a0%e9%a2%9d%e5%a4%96%e5%ae%8f%e5%ae%9a%e4%b9%89">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>由于 yocto 功能复杂，上述功能无法 100% 满足其所有场景，因此用户可以通过该功能添加需要的 yocto 宏定义</p>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="7-生成-bbfile">
+        7. 生成 bbfile
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/package/#7-生成-bbfile" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 7. 生成 bbfile" aria-label="Anchor to: 7. 生成 bbfile" href="#7-%e7%94%9f%e6%88%90-bbfile">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>完成上述添加后，点击 Generate bb/bbappend file 生成 yocto 包，包括 bbfile 以及本地文件</p>
+<p>用户可以点击 bitbake it! 测试添加的 yocto 包是否正确</p>
+
   </article>
 
 

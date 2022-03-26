@@ -9,13 +9,14 @@
 
 
 
-  <meta name="description" content="Dianshao Docs" />
+  <meta name="description" content="1. 硬件组成 2. u-boot  2.1 设备树开发 2.2 board 开发 2.3 config 2.4 bbfile   3. kernel  3.1 设备树 3.2 config 文件 3.3 Makefile Patch 3.4 linux bbappend   4. machine conf 5. distro conf      1. 硬件组成     对于一个基础的 LoRa 网关，主要有以下外设
+ LoRa 模块: semtech sx1301 基带芯片 4G 模块: 移远 EC20 PHY: KSZ8081 使用 SD 卡作为存储  2." />
 
 
 
     <title>
       
-        用户手册 | 
+        底层开发 | 
       Dianshao Docs
     </title>
 
@@ -35,15 +36,19 @@
 
     
 
-    <meta property="og:title" content="用户手册" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://dianshao-embedded.github.io/dianshao-docs/usermanual/" />
+    <meta property="og:title" content="底层开发" />
+<meta property="og:description" content="1. 硬件组成 2. u-boot  2.1 设备树开发 2.2 board 开发 2.3 config 2.4 bbfile   3. kernel  3.1 设备树 3.2 config 文件 3.3 Makefile Patch 3.4 linux bbappend   4. machine conf 5. distro conf      1. 硬件组成     对于一个基础的 LoRa 网关，主要有以下外设
+ LoRa 模块: semtech sx1301 基带芯片 4G 模块: 移远 EC20 PHY: KSZ8081 使用 SD 卡作为存储  2." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dianshao-embedded.github.io/dianshao-docs/lora-gateway/machine/" /><meta property="article:section" content="lora-gateway" />
+
+
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="用户手册"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="底层开发"/>
+<meta name="twitter:description" content="1. 硬件组成 2. u-boot  2.1 设备树开发 2.2 board 开发 2.3 config 2.4 bbfile   3. kernel  3.1 设备树 3.2 config 文件 3.3 Makefile Patch 3.4 linux bbappend   4. machine conf 5. distro conf      1. 硬件组成     对于一个基础的 LoRa 网关，主要有以下外设
+ LoRa 模块: semtech sx1301 基带芯片 4G 模块: 移远 EC20 PHY: KSZ8081 使用 SD 卡作为存储  2."/>
 
 
     <script src="/dianshao-docs/js/main-b1609106.bundle.min.js"></script>
@@ -112,6 +117,44 @@
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
     
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "TechArticle",
+    "articleSection": "lora-gateway",
+    "name": "底层开发",
+    "headline": "底层开发",
+    "alternativeHeadline": "",
+    "description": "1. 硬件组成 2. u-boot  2.1 设备树开发 2.2 board 开发 2.3 config 2.4 bbfile   3. kernel  3.1 设备树 3.2 config 文件 3.3 Makefile Patch 3.4 linux bbappend   4. machine conf 5. distro conf      1. 硬件组成     对于一个基础的 LoRa 网关，主要有以下外设\n LoRa 模块: semtech sx1301 基带芯片 4G 模块: 移远 EC20 PHY: KSZ8081 使用 SD 卡作为存储  2.",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https:\/\/dianshao-embedded.github.io\/dianshao-docs\/lora-gateway\/machine\/"
+    },
+    "copyrightHolder" : "Dianshao Docs",
+    "copyrightYear" : "0001",
+    "dateCreated": "0001-01-01T00:00:00.00Z",
+    "datePublished": "0001-01-01T00:00:00.00Z",
+    "dateModified": "0001-01-01T00:00:00.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "Dianshao Docs",
+        "url": "https://dianshao-embedded.github.io/dianshao-docs/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/dianshao-embedded.github.io\/dianshao-docs\/brand.svg",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "url" : "https:\/\/dianshao-embedded.github.io\/dianshao-docs\/lora-gateway\/machine\/",
+    "wordCount" : "505",
+    "genre" : [ ]
+}
+</script>
+
 
     
 
@@ -782,7 +825,7 @@
                 <span class="flex">
                   <a
                     href="/dianshao-docs/lora-gateway/machine/"
-                    class="gdoc-nav__entry "
+                    class="gdoc-nav__entry is-active"
                   >
                     底层开发
                   </a>
@@ -952,7 +995,15 @@
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/dianshao-docs/' href='/dianshao-docs/'><span itemprop='name'>欢迎使用颠勺</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>用户手册</span><meta itemprop='position' content='3' /></li>
+    
+    
+    
+    
+  
+  
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/dianshao-docs/' href='/dianshao-docs/'><span itemprop='name'>欢迎使用颠勺</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/dianshao-docs/lora-gateway/' href='/dianshao-docs/lora-gateway/'><span itemprop='name'>实例一</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>底层开发</span><meta itemprop='position' content='4' /></li>
+  
+
   
 
   
@@ -968,8 +1019,344 @@
   <article
     class="gdoc-markdown gdoc-markdown__align--left"
   >
-    <h1>用户手册</h1>
+    <h1>底层开发</h1>
     
+
+
+  <div class="gdoc-toc gdoc-toc__level--3">
+    <nav id="TableOfContents"><ul>
+        <li><a href="#1-硬件组成">1. 硬件组成</a></li>
+        <li><a href="#2-u-boot">2. u-boot</a>
+          <ul>
+            <li><a href="#21-设备树开发">2.1 设备树开发</a></li>
+            <li><a href="#22-board-开发">2.2 board 开发</a></li>
+            <li><a href="#23-config">2.3 config</a></li>
+            <li><a href="#24-bbfile">2.4 bbfile</a></li>
+          </ul>
+        </li>
+        <li><a href="#3-kernel">3. kernel</a>
+          <ul>
+            <li><a href="#31-设备树">3.1 设备树</a></li>
+            <li><a href="#32-config-文件">3.2 config 文件</a></li>
+            <li><a href="#33-makefile-patch">3.3 Makefile Patch</a></li>
+            <li><a href="#34-linux-bbappend">3.4 linux bbappend</a></li>
+          </ul>
+        </li>
+        <li><a href="#4-machine-conf">4. machine conf</a></li>
+        <li><a href="#5-distro-conf">5. distro conf</a></li>
+      </ul></nav>
+    <hr />
+  </div>
+
+
+<div class="gdoc-page__anchorwrap">
+    <h2 id="1-硬件组成">
+        1. 硬件组成
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/lora-gateway/machine/#1-硬件组成" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 1. 硬件组成" aria-label="Anchor to: 1. 硬件组成" href="#1-%e7%a1%ac%e4%bb%b6%e7%bb%84%e6%88%90">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>对于一个基础的 LoRa 网关，主要有以下外设</p>
+<ul>
+<li>LoRa 模块: semtech sx1301 基带芯片</li>
+<li>4G 模块: 移远 EC20</li>
+<li>PHY: KSZ8081</li>
+<li>使用 SD 卡作为存储</li>
+</ul>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="2-u-boot">
+        2. u-boot
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/lora-gateway/machine/#2-u-boot" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 2. u-boot" aria-label="Anchor to: 2. u-boot" href="#2-u-boot">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<div class="gdoc-page__anchorwrap">
+    <h3 id="21-设备树开发">
+        2.1 设备树开发
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/lora-gateway/machine/#21-设备树开发" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 2.1 设备树开发" aria-label="Anchor to: 2.1 设备树开发" href="#21-%e8%ae%be%e5%a4%87%e6%a0%91%e5%bc%80%e5%8f%91">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h3>
+</div>
+<p>设备树开发可参考官方开发板设备树文件，其实也无需过多改动，因为 u-boot 的用途只是加载内核及内核设备树，所以只需确保 SD 可用就可以了</p>
+<p>本例程中新建 imx6ull-lgw-uboot.dts, 其中 SD 相关设置如下</p>
+<pre tabindex="0"><code>&amp;usdhc1 {
+	pinctrl-names = &#34;default&#34;, &#34;state_100mhz&#34;, &#34;state_200mhz&#34;;
+	pinctrl-0 = &lt;&amp;pinctrl_usdhc1&gt;;
+	pinctrl-1 = &lt;&amp;pinctrl_usdhc1_100mhz&gt;;
+	pinctrl-2 = &lt;&amp;pinctrl_usdhc1_200mhz&gt;;
+	keep-power-in-suspend;
+	broken-cd;
+	vmmc-supply = &lt;&amp;reg_sd1_vmmc&gt;;
+	status = &#34;okay&#34;;
+};
+</code></pre><div class="gdoc-page__anchorwrap">
+    <h3 id="22-board-开发">
+        2.2 board 开发
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/lora-gateway/machine/#22-board-开发" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 2.2 board 开发" aria-label="Anchor to: 2.2 board 开发" href="#22-board-%e5%bc%80%e5%8f%91">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h3>
+</div>
+<p>通常来说，每种终端产品都要开发 board 相关的初始化代码及头文件。但是正如上述所说，u-boot 用途只是加载内核，所以可以使用官方开发板的 board 代码进行少量修改。</p>
+<p>本例程中使用 imx6ull 芯片，所以我使用 imx6ullevk 开发板的 board 代码，并对头文件进行修改以正确加载内核及设备树</p>
+<div class="gdoc-page__anchorwrap">
+    <h3 id="23-config">
+        2.3 config
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/lora-gateway/machine/#23-config" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 2.3 config" aria-label="Anchor to: 2.3 config" href="#23-config">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h3>
+</div>
+<p>config 同样可以参照 imx6ullevk 的默认配置，需确认启动方式，以及设备树选择</p>
+<pre tabindex="0"><code>CONFIG_DEFAULT_DEVICE_TREE=&#34;imx6ull-gw1000-uboot&#34;
+</code></pre><p>同时要制作设备树文件夹下 makefile 文件补丁，添加 2.1 中新建的设备树</p>
+<pre tabindex="0"><code>--- ./arch/arm/dts/Makefile
++++ ./arch/arm/dts/Makefile
+@@ -724,7 +724,8 @@
+ 	imx6ull-somlabs-visionsom.dtb \
+ 	imx6ulz-14x14-evk.dtb \
+ 	imx6ulz-14x14-evk-emmc.dtb \
+-	imx6ulz-14x14-evk-gpmi-weim.dtb
++	imx6ulz-14x14-evk-gpmi-weim.dtb \
++	imx6ull-gw1000-uboot.dtb
+ 
+ dtb-$(CONFIG_ARCH_MX6) += \
+ 	imx6-apalis.dtb \
+</code></pre><div class="gdoc-page__anchorwrap">
+    <h3 id="24-bbfile">
+        2.4 bbfile
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/lora-gateway/machine/#24-bbfile" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 2.4 bbfile" aria-label="Anchor to: 2.4 bbfile" href="#24-bbfile">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h3>
+</div>
+<p>需要通过 u-boot.bbappend 将上述改动添加进编译过程</p>
+<pre tabindex="0"><code># u-boot-imx-%
+# Auto Generate by Dianshao
+FILESEXTRAPATHS_prepend := &#34;${THISDIR}/files:&#34;
+DESCRIPTION = &#34;u-boot-imx bbappend&#34;
+LICENSE = &#34;&#34;
+DEPENDS = &#34;vim-native bison-native&#34;
+SRC_URI_append = &#34;\ 
+	file://mx6ullevk.h.patch \ 
+	file://Makefile.patch \ 
+	file://mx6ull_gw1000_defconfig \ 
+	file://imx6ull-gw1000-uboot.dts \ 
+&#34;
+do_configure_prepend () {
+	cp ${WORKDIR}/mx6ull_gw1000_defconfig ${S}/configs
+	cp ${WORKDIR}/imx6ull-gw1000-uboot.dts ${S}/arch/arm/dts
+}
+</code></pre><div class="gdoc-page__anchorwrap">
+    <h2 id="3-kernel">
+        3. kernel
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/lora-gateway/machine/#3-kernel" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 3. kernel" aria-label="Anchor to: 3. kernel" href="#3-kernel">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<div class="gdoc-page__anchorwrap">
+    <h3 id="31-设备树">
+        3.1 设备树
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/lora-gateway/machine/#31-设备树" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 3.1 设备树" aria-label="Anchor to: 3.1 设备树" href="#31-%e8%ae%be%e5%a4%87%e6%a0%91">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h3>
+</div>
+<p>针对上述外设，设备树需增加以下部分内容</p>
+<ul>
+<li>SD 卡</li>
+</ul>
+<pre tabindex="0"><code>&amp;usdhc1 {
+	pinctrl-names = &#34;default&#34;, &#34;state_100mhz&#34;, &#34;state_200mhz&#34;;
+	pinctrl-0 = &lt;&amp;pinctrl_usdhc1&gt;;
+	pinctrl-1 = &lt;&amp;pinctrl_usdhc1_100mhz&gt;;
+	pinctrl-2 = &lt;&amp;pinctrl_usdhc1_200mhz&gt;;
+	keep-power-in-suspend;
+	broken-cd;
+	vmmc-supply = &lt;&amp;reg_sd1_vmmc&gt;;
+	status = &#34;okay&#34;;
+};
+</code></pre><ul>
+<li>spi - lora 芯片</li>
+</ul>
+<pre tabindex="0"><code>&amp;ecspi1 {
+	pinctrl-names = &#34;default&#34;;
+	pinctrl-0 = &lt;&amp;pinctrl_ecspi1_1 &amp;pinctrl_ecspi1_cs_1&gt;;
+	fsl,spi-num-chipselects = &lt;1&gt;;
+	//cs-gpios = &lt;&amp;gpio4 26 0&gt;;
+	status = &#34;okay&#34;;
+
+	spidev0: spidev@0 {
+		compatible = &#34;spidev&#34;;
+		spi-max-frequency = &lt;8000000&gt;;
+		reg = &lt;0&gt;;
+	};	
+};
+</code></pre><ul>
+<li>usb - ec20</li>
+</ul>
+<pre tabindex="0"><code>&amp;usbotg2 {
+	dr_mode = &#34;host&#34;;
+	disable-over-current;
+	status = &#34;okay&#34;;
+};
+</code></pre><ul>
+<li>fec - phy</li>
+</ul>
+<pre tabindex="0"><code>&amp;fec1 {
+	pinctrl-names = &#34;default&#34;;
+	pinctrl-0 = &lt;&amp;pinctrl_enet1&gt;;
+	phy-mode = &#34;rmii&#34;;
+	phy-handle = &lt;&amp;ethphy0&gt;;
+	phy-reset-gpios = &lt;&amp;gpio5 8 GPIO_ACTIVE_LOW&gt;;
+	phy-reset-duration = &lt;10&gt;;
+	local-mac-address = [00 06 34 01 01 01];
+	status = &#34;okay&#34;;
+
+	mdio {
+		#address-cells = &lt;1&gt;;
+		#size-cells = &lt;0&gt;;
+
+		ethphy0: ethernet-phy@2 {
+			reg = &lt;2&gt;;
+			micrel,led-mode = &lt;1&gt;;
+			clocks = &lt;&amp;clks IMX6UL_CLK_ENET_REF&gt;;
+			clock-names = &#34;rmii-ref&#34;;
+		};
+	};
+};
+</code></pre><div class="gdoc-page__anchorwrap">
+    <h3 id="32-config-文件">
+        3.2 config 文件
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/lora-gateway/machine/#32-config-文件" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 3.2 config 文件" aria-label="Anchor to: 3.2 config 文件" href="#32-config-%e6%96%87%e4%bb%b6">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h3>
+</div>
+<p>在 freescale 官方配置文件基础上，还需添加以下几点</p>
+<ul>
+<li>ppp 支持</li>
+</ul>
+<pre tabindex="0"><code>CONFIG_PPP=y
+CONFIG_PPP_BSDCOMP=y
+CONFIG_PPP_DEFLATE=y
+CONFIG_PPP_FILTER=y
+CONFIG_PPP_MPPE=y
+CONFIG_PPP_MULTILINK=y
+CONFIG_PPP_ASYNC=y
+CONFIG_PPP_SYNC_TTY=y
+CONFIG_SLHC=y
+</code></pre><ul>
+<li>usb wwan 支持</li>
+</ul>
+<pre tabindex="0"><code>CONFIG_USB_ACM=y
+CONFIG_USB_SERIAL=y
+CONFIG_USB_SERIAL_WWAN=y
+CONFIG_USB_SERIAL_OPTION=y
+</code></pre><ul>
+<li>tmpfs 支持</li>
+</ul>
+<pre tabindex="0"><code>CONFIG_TMPFS=y
+CONFIG_TMPFS_POSIX_ACL=y
+CONFIG_TMPFS_XATTR=y
+CONFIG_MEMFD_CREATE=y
+</code></pre><div class="gdoc-page__anchorwrap">
+    <h3 id="33-makefile-patch">
+        3.3 Makefile Patch
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/lora-gateway/machine/#33-makefile-patch" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 3.3 Makefile Patch" aria-label="Anchor to: 3.3 Makefile Patch" href="#33-makefile-patch">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h3>
+</div>
+<p>修改 dts 目录下 Makefile 以增加新增设备树</p>
+<pre tabindex="0"><code>--- ./arch/arm/boot/dts/Makefile
++++ ./arch/arm/boot/dts/Makefile
+@@ -692,6 +692,7 @@
+ 	imx6ull-phytec-segin-ff-rdk-nand.dtb \
+ 	imx6ull-phytec-segin-ff-rdk-emmc.dtb \
+ 	imx6ull-phytec-segin-lc-rdk-nand.dtb \
++	imx6ull-gw1000.dtb \
+ 	imx6ulz-14x14-evk.dtb \
+ 	imx6ulz-14x14-evk-btwifi.dtb \
+ 	imx6ulz-14x14-evk-gpmi-weim.dtb \
+</code></pre><div class="gdoc-page__anchorwrap">
+    <h3 id="34-linux-bbappend">
+        3.4 linux bbappend
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/lora-gateway/machine/#34-linux-bbappend" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 3.4 linux bbappend" aria-label="Anchor to: 3.4 linux bbappend" href="#34-linux-bbappend">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h3>
+</div>
+<p>增加 bbappend 将上述改动增加到编译过程</p>
+<pre tabindex="0"><code># linux-imx-5.10
+# Auto Generate by Dianshao
+FILESEXTRAPATHS_prepend := &#34;${THISDIR}/files:&#34;
+DESCRIPTION = &#34;linux-imx bbappend for lorawan gateway&#34;
+SRC_URI_append = &#34;\ 
+	file://Makefile.patch \
+	file://gw1000.cfg \
+	file://imx6ull-gw1000.dts \
+&#34;
+do_configure_append () {
+	cat ../*cfg &gt;&gt; ${B}/.config 
+}
+
+do_compile_prepend () {
+	cp ${WORKDIR}/imx6ull-gw1000.dts \
+	${S}/arch/${ARCH}/boot/dts
+}
+</code></pre><div class="gdoc-page__anchorwrap">
+    <h2 id="4-machine-conf">
+        4. machine conf
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/lora-gateway/machine/#4-machine-conf" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 4. machine conf" aria-label="Anchor to: 4. machine conf" href="#4-machine-conf">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>我们在官方提供的 imx6ullevk.conf 的基础上进行修改，主要是有如下部分</p>
+<ul>
+<li>uboot 配置文件和启动方式</li>
+</ul>
+<pre tabindex="0"><code>UBOOT_CONFIG = &#34;sd&#34;
+UBOOT_CONFIG[sd] = &#34;mx6ull_gw1000_defconfig,sdcard&#34;
+</code></pre><ul>
+<li>uboot 编译产物名称</li>
+</ul>
+<pre tabindex="0"><code>UBOOT_SUFFIX = &#34;imx&#34;
+UBOOT_MAKE_TARGET = &#34;u-boot.imx&#34;
+</code></pre><ul>
+<li>fsl 内核要求宏</li>
+</ul>
+<pre tabindex="0"><code>ACCEPT_FSL_EULA = &#34;1&#34;
+</code></pre><ul>
+<li>内核设备树</li>
+</ul>
+<pre tabindex="0"><code>KERNEL_DEVICETREE = &#34;imx6ull-gw1000.dtb&#34;
+</code></pre><div class="gdoc-page__anchorwrap">
+    <h2 id="5-distro-conf">
+        5. distro conf
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/lora-gateway/machine/#5-distro-conf" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 5. distro conf" aria-label="Anchor to: 5. distro conf" href="#5-distro-conf">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>在官方提供的 fsl-base.inc 基础上进行修改</p>
+<ul>
+<li>名称及版本号</li>
+</ul>
+<pre tabindex="0"><code>DISTRO = &#34;dianshao&#34;
+DISTRO_NAME = &#34;dianshao&#34;
+DISTRO_VERSION = &#34;1.0.0&#34;
+</code></pre><ul>
+<li>选择 systemd 为启动方式</li>
+</ul>
+<pre tabindex="0"><code>DISTRO_FEATURES_append = &#34; systemd&#34;
+VIRTUAL-RUNTIME_init_manager = &#34;systemd&#34;
+</code></pre>
   </article>
 
 

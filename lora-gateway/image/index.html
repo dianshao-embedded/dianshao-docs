@@ -9,13 +9,16 @@
 
 
 
-  <meta name="description" content="Dianshao Docs" />
+  <meta name="description" content="1. 说明 2. 创建镜像 3. 镜像制作 4. 文件系统制作 5. 与上菜配合使用 6. 生成镜像、升级包 bbfile 7. 编译镜像 8. 上传升级包      1. 说明     lora gateway 镜像除了基础文件系统之外，主要包括 ec20, packet-forwarder, chirpstack-gateway-bridge 三个软件包
+2. 创建镜像     我们基于 poky-base 制作文件系统，并选择 sd 作为存储方式
+3. 镜像制作     我们使用 freescale 官方提供的 wks 文件，因此不需要自己创建 wks 文件
+4. 文件系统制作     文件系统需要添加 ec20, packet-forwarder, chirpstack-gateway-bridge 三个文件包，同时增加一个 sudo 软件包，增加 admin 用户" />
 
 
 
     <title>
       
-        用户手册 | 
+        镜像 | 
       Dianshao Docs
     </title>
 
@@ -35,15 +38,23 @@
 
     
 
-    <meta property="og:title" content="用户手册" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://dianshao-embedded.github.io/dianshao-docs/usermanual/" />
+    <meta property="og:title" content="镜像" />
+<meta property="og:description" content="1. 说明 2. 创建镜像 3. 镜像制作 4. 文件系统制作 5. 与上菜配合使用 6. 生成镜像、升级包 bbfile 7. 编译镜像 8. 上传升级包      1. 说明     lora gateway 镜像除了基础文件系统之外，主要包括 ec20, packet-forwarder, chirpstack-gateway-bridge 三个软件包
+2. 创建镜像     我们基于 poky-base 制作文件系统，并选择 sd 作为存储方式
+3. 镜像制作     我们使用 freescale 官方提供的 wks 文件，因此不需要自己创建 wks 文件
+4. 文件系统制作     文件系统需要添加 ec20, packet-forwarder, chirpstack-gateway-bridge 三个文件包，同时增加一个 sudo 软件包，增加 admin 用户" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dianshao-embedded.github.io/dianshao-docs/lora-gateway/image/" /><meta property="article:section" content="lora-gateway" />
+
+
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="用户手册"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="镜像"/>
+<meta name="twitter:description" content="1. 说明 2. 创建镜像 3. 镜像制作 4. 文件系统制作 5. 与上菜配合使用 6. 生成镜像、升级包 bbfile 7. 编译镜像 8. 上传升级包      1. 说明     lora gateway 镜像除了基础文件系统之外，主要包括 ec20, packet-forwarder, chirpstack-gateway-bridge 三个软件包
+2. 创建镜像     我们基于 poky-base 制作文件系统，并选择 sd 作为存储方式
+3. 镜像制作     我们使用 freescale 官方提供的 wks 文件，因此不需要自己创建 wks 文件
+4. 文件系统制作     文件系统需要添加 ec20, packet-forwarder, chirpstack-gateway-bridge 三个文件包，同时增加一个 sudo 软件包，增加 admin 用户"/>
 
 
     <script src="/dianshao-docs/js/main-b1609106.bundle.min.js"></script>
@@ -112,6 +123,44 @@
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
     
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "TechArticle",
+    "articleSection": "lora-gateway",
+    "name": "镜像",
+    "headline": "镜像",
+    "alternativeHeadline": "",
+    "description": "1. 说明 2. 创建镜像 3. 镜像制作 4. 文件系统制作 5. 与上菜配合使用 6. 生成镜像、升级包 bbfile 7. 编译镜像 8. 上传升级包      1. 说明     lora gateway 镜像除了基础文件系统之外，主要包括 ec20, packet-forwarder, chirpstack-gateway-bridge 三个软件包\n2. 创建镜像     我们基于 poky-base 制作文件系统，并选择 sd 作为存储方式\n3. 镜像制作     我们使用 freescale 官方提供的 wks 文件，因此不需要自己创建 wks 文件\n4. 文件系统制作     文件系统需要添加 ec20, packet-forwarder, chirpstack-gateway-bridge 三个文件包，同时增加一个 sudo 软件包，增加 admin 用户",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https:\/\/dianshao-embedded.github.io\/dianshao-docs\/lora-gateway\/image\/"
+    },
+    "copyrightHolder" : "Dianshao Docs",
+    "copyrightYear" : "0001",
+    "dateCreated": "0001-01-01T00:00:00.00Z",
+    "datePublished": "0001-01-01T00:00:00.00Z",
+    "dateModified": "0001-01-01T00:00:00.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "Dianshao Docs",
+        "url": "https://dianshao-embedded.github.io/dianshao-docs/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/dianshao-embedded.github.io\/dianshao-docs\/brand.svg",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "url" : "https:\/\/dianshao-embedded.github.io\/dianshao-docs\/lora-gateway\/image\/",
+    "wordCount" : "72",
+    "genre" : [ ]
+}
+</script>
+
 
     
 
@@ -872,7 +921,7 @@
                 <span class="flex">
                   <a
                     href="/dianshao-docs/lora-gateway/image/"
-                    class="gdoc-nav__entry "
+                    class="gdoc-nav__entry is-active"
                   >
                     镜像
                   </a>
@@ -952,7 +1001,15 @@
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/dianshao-docs/' href='/dianshao-docs/'><span itemprop='name'>欢迎使用颠勺</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>用户手册</span><meta itemprop='position' content='3' /></li>
+    
+    
+    
+    
+  
+  
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/dianshao-docs/' href='/dianshao-docs/'><span itemprop='name'>欢迎使用颠勺</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/dianshao-docs/lora-gateway/' href='/dianshao-docs/lora-gateway/'><span itemprop='name'>实例一</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>镜像</span><meta itemprop='position' content='4' /></li>
+  
+
   
 
   
@@ -968,8 +1025,96 @@
   <article
     class="gdoc-markdown gdoc-markdown__align--left"
   >
-    <h1>用户手册</h1>
+    <h1>镜像</h1>
     
+
+
+  <div class="gdoc-toc gdoc-toc__level--3">
+    <nav id="TableOfContents"><ul>
+        <li><a href="#1-说明">1. 说明</a></li>
+        <li><a href="#2-创建镜像">2. 创建镜像</a></li>
+        <li><a href="#3-镜像制作">3. 镜像制作</a></li>
+        <li><a href="#4-文件系统制作">4. 文件系统制作</a></li>
+        <li><a href="#5-与上菜配合使用">5. 与上菜配合使用</a></li>
+        <li><a href="#6-生成镜像升级包-bbfile">6. 生成镜像、升级包 bbfile</a></li>
+        <li><a href="#7-编译镜像">7. 编译镜像</a></li>
+        <li><a href="#8-上传升级包">8. 上传升级包</a></li>
+      </ul></nav>
+    <hr />
+  </div>
+
+
+<div class="gdoc-page__anchorwrap">
+    <h2 id="1-说明">
+        1. 说明
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/lora-gateway/image/#1-说明" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 1. 说明" aria-label="Anchor to: 1. 说明" href="#1-%e8%af%b4%e6%98%8e">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>lora gateway 镜像除了基础文件系统之外，主要包括 ec20, packet-forwarder, chirpstack-gateway-bridge 三个软件包</p>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="2-创建镜像">
+        2. 创建镜像
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/lora-gateway/image/#2-创建镜像" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 2. 创建镜像" aria-label="Anchor to: 2. 创建镜像" href="#2-%e5%88%9b%e5%bb%ba%e9%95%9c%e5%83%8f">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>我们基于 poky-base 制作文件系统，并选择 sd 作为存储方式</p>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="3-镜像制作">
+        3. 镜像制作
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/lora-gateway/image/#3-镜像制作" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 3. 镜像制作" aria-label="Anchor to: 3. 镜像制作" href="#3-%e9%95%9c%e5%83%8f%e5%88%b6%e4%bd%9c">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>我们使用 freescale 官方提供的 wks 文件，因此不需要自己创建 wks 文件</p>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="4-文件系统制作">
+        4. 文件系统制作
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/lora-gateway/image/#4-文件系统制作" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 4. 文件系统制作" aria-label="Anchor to: 4. 文件系统制作" href="#4-%e6%96%87%e4%bb%b6%e7%b3%bb%e7%bb%9f%e5%88%b6%e4%bd%9c">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>文件系统需要添加 ec20, packet-forwarder, chirpstack-gateway-bridge 三个文件包，同时增加一个 sudo 软件包，增加 admin 用户</p>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="5-与上菜配合使用">
+        5. 与上菜配合使用
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/lora-gateway/image/#5-与上菜配合使用" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 5. 与上菜配合使用" aria-label="Anchor to: 5. 与上菜配合使用" href="#5-%e4%b8%8e%e4%b8%8a%e8%8f%9c%e9%85%8d%e5%90%88%e4%bd%bf%e7%94%a8">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="6-生成镜像升级包-bbfile">
+        6. 生成镜像、升级包 bbfile
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/lora-gateway/image/#6-生成镜像升级包-bbfile" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 6. 生成镜像、升级包 bbfile" aria-label="Anchor to: 6. 生成镜像、升级包 bbfile" href="#6-%e7%94%9f%e6%88%90%e9%95%9c%e5%83%8f%e5%8d%87%e7%ba%a7%e5%8c%85-bbfile">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>点击 make image file 自动生成镜像 bbfile</p>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="7-编译镜像">
+        7. 编译镜像
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/lora-gateway/image/#7-编译镜像" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 7. 编译镜像" aria-label="Anchor to: 7. 编译镜像" href="#7-%e7%bc%96%e8%af%91%e9%95%9c%e5%83%8f">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>点击 bitbake image!! 开发编译构建镜像</p>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="8-上传升级包">
+        8. 上传升级包
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/lora-gateway/image/#8-上传升级包" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 8. 上传升级包" aria-label="Anchor to: 8. 上传升级包" href="#8-%e4%b8%8a%e4%bc%a0%e5%8d%87%e7%ba%a7%e5%8c%85">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+
   </article>
 
 

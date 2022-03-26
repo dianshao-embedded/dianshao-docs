@@ -9,13 +9,15 @@
 
 
 
-  <meta name="description" content="Dianshao Docs" />
+  <meta name="description" content="1. 说明 2. 创建 3. 镜像制作 4. 文件系统制作 5. 与上菜配合使用 6. 增加额外宏定义 7. 生成镜像、升级包 bbfile 8. 编译镜像 9. 上传升级包      1. 说明     颠勺提供 MyImage 功能帮助开发者快速制作文件系统、镜像以及升级包
+2. 创建     点击 New Image 创建新的镜像，填写必要信息
+ Base: 由于文件系统包含太多文件，因此 yocto 提供了两种基础文件系统供我们在其基础上添加自己的文件。其中 minimal 只包含启动所必须的文件，base 则包含了芯片所有外设的固件库 Flash: 选择终端使用的 Flash 类型，目前提供 spi-nor, rawnand, sd 可选  3. 镜像制作      目前 Yocto 只支持 sd 卡的镜像制作，用户通过点击 ADD WKS FILE 创建 Wic File 确定分区，yocto 会自动构建wic 镜像 主流芯片及开发板厂商通常会在其元数据层中提供默认 wic file，因此也可以不填  4." />
 
 
 
     <title>
       
-        用户手册 | 
+        镜像 | 
       Dianshao Docs
     </title>
 
@@ -35,15 +37,21 @@
 
     
 
-    <meta property="og:title" content="用户手册" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://dianshao-embedded.github.io/dianshao-docs/usermanual/" />
+    <meta property="og:title" content="镜像" />
+<meta property="og:description" content="1. 说明 2. 创建 3. 镜像制作 4. 文件系统制作 5. 与上菜配合使用 6. 增加额外宏定义 7. 生成镜像、升级包 bbfile 8. 编译镜像 9. 上传升级包      1. 说明     颠勺提供 MyImage 功能帮助开发者快速制作文件系统、镜像以及升级包
+2. 创建     点击 New Image 创建新的镜像，填写必要信息
+ Base: 由于文件系统包含太多文件，因此 yocto 提供了两种基础文件系统供我们在其基础上添加自己的文件。其中 minimal 只包含启动所必须的文件，base 则包含了芯片所有外设的固件库 Flash: 选择终端使用的 Flash 类型，目前提供 spi-nor, rawnand, sd 可选  3. 镜像制作      目前 Yocto 只支持 sd 卡的镜像制作，用户通过点击 ADD WKS FILE 创建 Wic File 确定分区，yocto 会自动构建wic 镜像 主流芯片及开发板厂商通常会在其元数据层中提供默认 wic file，因此也可以不填  4." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dianshao-embedded.github.io/dianshao-docs/usermanual/image/" /><meta property="article:section" content="usermanual" />
+
+
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="用户手册"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="镜像"/>
+<meta name="twitter:description" content="1. 说明 2. 创建 3. 镜像制作 4. 文件系统制作 5. 与上菜配合使用 6. 增加额外宏定义 7. 生成镜像、升级包 bbfile 8. 编译镜像 9. 上传升级包      1. 说明     颠勺提供 MyImage 功能帮助开发者快速制作文件系统、镜像以及升级包
+2. 创建     点击 New Image 创建新的镜像，填写必要信息
+ Base: 由于文件系统包含太多文件，因此 yocto 提供了两种基础文件系统供我们在其基础上添加自己的文件。其中 minimal 只包含启动所必须的文件，base 则包含了芯片所有外设的固件库 Flash: 选择终端使用的 Flash 类型，目前提供 spi-nor, rawnand, sd 可选  3. 镜像制作      目前 Yocto 只支持 sd 卡的镜像制作，用户通过点击 ADD WKS FILE 创建 Wic File 确定分区，yocto 会自动构建wic 镜像 主流芯片及开发板厂商通常会在其元数据层中提供默认 wic file，因此也可以不填  4."/>
 
 
     <script src="/dianshao-docs/js/main-b1609106.bundle.min.js"></script>
@@ -112,6 +120,44 @@
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
     
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "TechArticle",
+    "articleSection": "usermanual",
+    "name": "镜像",
+    "headline": "镜像",
+    "alternativeHeadline": "",
+    "description": "1. 说明 2. 创建 3. 镜像制作 4. 文件系统制作 5. 与上菜配合使用 6. 增加额外宏定义 7. 生成镜像、升级包 bbfile 8. 编译镜像 9. 上传升级包      1. 说明     颠勺提供 MyImage 功能帮助开发者快速制作文件系统、镜像以及升级包\n2. 创建     点击 New Image 创建新的镜像，填写必要信息\n Base: 由于文件系统包含太多文件，因此 yocto 提供了两种基础文件系统供我们在其基础上添加自己的文件。其中 minimal 只包含启动所必须的文件，base 则包含了芯片所有外设的固件库 Flash: 选择终端使用的 Flash 类型，目前提供 spi-nor, rawnand, sd 可选  3. 镜像制作      目前 Yocto 只支持 sd 卡的镜像制作，用户通过点击 ADD WKS FILE 创建 Wic File 确定分区，yocto 会自动构建wic 镜像 主流芯片及开发板厂商通常会在其元数据层中提供默认 wic file，因此也可以不填  4.",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https:\/\/dianshao-embedded.github.io\/dianshao-docs\/usermanual\/image\/"
+    },
+    "copyrightHolder" : "Dianshao Docs",
+    "copyrightYear" : "0001",
+    "dateCreated": "0001-01-01T00:00:00.00Z",
+    "datePublished": "0001-01-01T00:00:00.00Z",
+    "dateModified": "0001-01-01T00:00:00.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "Dianshao Docs",
+        "url": "https://dianshao-embedded.github.io/dianshao-docs/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/dianshao-embedded.github.io\/dianshao-docs\/brand.svg",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "url" : "https:\/\/dianshao-embedded.github.io\/dianshao-docs\/usermanual\/image\/",
+    "wordCount" : "146",
+    "genre" : [ ]
+}
+</script>
+
 
     
 
@@ -627,7 +673,7 @@
                 <span class="flex">
                   <a
                     href="/dianshao-docs/usermanual/image/"
-                    class="gdoc-nav__entry "
+                    class="gdoc-nav__entry is-active"
                   >
                     镜像
                   </a>
@@ -952,7 +998,15 @@
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/dianshao-docs/' href='/dianshao-docs/'><span itemprop='name'>欢迎使用颠勺</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>用户手册</span><meta itemprop='position' content='3' /></li>
+    
+    
+    
+    
+  
+  
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/dianshao-docs/' href='/dianshao-docs/'><span itemprop='name'>欢迎使用颠勺</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/dianshao-docs/usermanual/' href='/dianshao-docs/usermanual/'><span itemprop='name'>用户手册</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>镜像</span><meta itemprop='position' content='4' /></li>
+  
+
   
 
   
@@ -968,8 +1022,132 @@
   <article
     class="gdoc-markdown gdoc-markdown__align--left"
   >
-    <h1>用户手册</h1>
+    <h1>镜像</h1>
     
+
+
+  <div class="gdoc-toc gdoc-toc__level--3">
+    <nav id="TableOfContents"><ul>
+        <li><a href="#1-说明">1. 说明</a></li>
+        <li><a href="#2-创建">2. 创建</a></li>
+        <li><a href="#3-镜像制作">3. 镜像制作</a></li>
+        <li><a href="#4-文件系统制作">4. 文件系统制作</a></li>
+        <li><a href="#5-与上菜配合使用">5. 与上菜配合使用</a></li>
+        <li><a href="#6-增加额外宏定义">6. 增加额外宏定义</a></li>
+        <li><a href="#7-生成镜像升级包-bbfile">7. 生成镜像、升级包 bbfile</a></li>
+        <li><a href="#8-编译镜像">8. 编译镜像</a></li>
+        <li><a href="#9-上传升级包">9. 上传升级包</a></li>
+      </ul></nav>
+    <hr />
+  </div>
+
+
+<div class="gdoc-page__anchorwrap">
+    <h2 id="1-说明">
+        1. 说明
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/image/#1-说明" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 1. 说明" aria-label="Anchor to: 1. 说明" href="#1-%e8%af%b4%e6%98%8e">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>颠勺提供 MyImage 功能帮助开发者快速制作文件系统、镜像以及升级包</p>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="2-创建">
+        2. 创建
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/image/#2-创建" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 2. 创建" aria-label="Anchor to: 2. 创建" href="#2-%e5%88%9b%e5%bb%ba">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>点击 New Image 创建新的镜像，填写必要信息</p>
+<ul>
+<li>Base: 由于文件系统包含太多文件，因此 yocto 提供了两种基础文件系统供我们在其基础上添加自己的文件。其中 minimal 只包含启动所必须的文件，base 则包含了芯片所有外设的固件库</li>
+<li>Flash: 选择终端使用的 Flash 类型，目前提供 spi-nor, rawnand, sd 可选</li>
+</ul>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="3-镜像制作">
+        3. 镜像制作
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/image/#3-镜像制作" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 3. 镜像制作" aria-label="Anchor to: 3. 镜像制作" href="#3-%e9%95%9c%e5%83%8f%e5%88%b6%e4%bd%9c">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<ul>
+<li>目前 Yocto 只支持 sd 卡的镜像制作，用户通过点击 ADD WKS FILE 创建 Wic File 确定分区，yocto 会自动构建wic 镜像</li>
+<li>主流芯片及开发板厂商通常会在其元数据层中提供默认 wic file，因此也可以不填</li>
+</ul>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="4-文件系统制作">
+        4. 文件系统制作
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/image/#4-文件系统制作" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 4. 文件系统制作" aria-label="Anchor to: 4. 文件系统制作" href="#4-%e6%96%87%e4%bb%b6%e7%b3%bb%e7%bb%9f%e5%88%b6%e4%bd%9c">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>文件系统的含义无非就是包含哪些软件及相关文件，而 yocto 包已经将每个软件相关文件编译安装方式完成，因此这里只需填写需要包含哪些 yocto 包，每个包之间用逗号间隔</p>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="5-与上菜配合使用">
+        5. 与上菜配合使用
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/image/#5-与上菜配合使用" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 5. 与上菜配合使用" aria-label="Anchor to: 5. 与上菜配合使用" href="#5-%e4%b8%8e%e4%b8%8a%e8%8f%9c%e9%85%8d%e5%90%88%e4%bd%bf%e7%94%a8">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>传统方式下，开发者每次编译完成后会手动将镜像烧入终端，进行调试，在频繁修改固件调试时不太方便。</p>
+<p>颠勺可以与 <a
+  class="gdoc-markdown__link"
+  href="https://dianshao-embedded.github.io/dishes-docs/"
+  
+  >上菜</a
+> 配合使用，实现开发阶段固件自动更新，方便开发者频繁修改固件测试</p>
+<ul>
+<li>compitable: rauc 固件适配参数设置，请参考 rauc 官方文档说明</li>
+<li>product id: 该终端所属产品在上菜平台上的产品 ID</li>
+<li>fs type: 升级包文件系统类型，例如 ext4</li>
+<li>version: 升级包版本号，在开发阶段，版本号无需正式，用于方便开发者自己区分</li>
+<li>file path: 升级包在 build 文件夹下路径，例如 &ldquo;build/tmp-glibc/deploy/images/raspberrypi4&rdquo;</li>
+<li>file name: 升级包名称，例如 &ldquo;update-bundle-ota-test-image-raspberrypi4.raucb&rdquo;</li>
+<li>stage: 固件阶段，默认为 dev, 固件阶段定义请参考上菜文档</li>
+<li>dishes url: 上菜平台 url</li>
+</ul>
+<p>如果您无需集成上菜进行自动更新，此部分可以略过</p>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="6-增加额外宏定义">
+        6. 增加额外宏定义
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/image/#6-增加额外宏定义" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 6. 增加额外宏定义" aria-label="Anchor to: 6. 增加额外宏定义" href="#6-%e5%a2%9e%e5%8a%a0%e9%a2%9d%e5%a4%96%e5%ae%8f%e5%ae%9a%e4%b9%89">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>由于 yocto 功能复杂，上述功能无法 100% 满足其所有场景，因此用户可以通过该功能添加需要的 yocto 宏定义。这些宏定义会写入生成的镜像 bbfile 中</p>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="7-生成镜像升级包-bbfile">
+        7. 生成镜像、升级包 bbfile
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/image/#7-生成镜像升级包-bbfile" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 7. 生成镜像、升级包 bbfile" aria-label="Anchor to: 7. 生成镜像、升级包 bbfile" href="#7-%e7%94%9f%e6%88%90%e9%95%9c%e5%83%8f%e5%8d%87%e7%ba%a7%e5%8c%85-bbfile">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>点击 make image file 自动生成镜像及 rauc 升级包 bbfile</p>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="8-编译镜像">
+        8. 编译镜像
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/image/#8-编译镜像" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 8. 编译镜像" aria-label="Anchor to: 8. 编译镜像" href="#8-%e7%bc%96%e8%af%91%e9%95%9c%e5%83%8f">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>点击 bitbake image!! 开发编译构建镜像，由于 yocto 完全从源码开始编译，加上国内网络较慢，编译时间可能会很长，一两天时间也是正常的</p>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="9-上传升级包">
+        9. 上传升级包
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/image/#9-上传升级包" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 9. 上传升级包" aria-label="Anchor to: 9. 上传升级包" href="#9-%e4%b8%8a%e4%bc%a0%e5%8d%87%e7%ba%a7%e5%8c%85">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>点击 dishes image 将升级包上传至上菜平台，由其通知终端进行升级</p>
+
   </article>
 
 
