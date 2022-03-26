@@ -16,7 +16,7 @@ LoRa 模块: semtech sx1301 基带芯片 4G 模块: 移远 EC20 PHY: KSZ8081 使
 总的来说，颠勺是 Bitbake 的拓展，目的是帮助开发者更方便的开发 Yocto 项目
 如果你对 Yocto 很熟悉，那你会很快掌握颠勺。如果你是一个初学者，颠勺将帮助你快速理解和学会开发 Yocto 项目。但是建议你最好有一定的嵌入式 Linux 开发经验。
 详细的使用说明请参考颠勺用户手册，里面会更加详细的介绍颠勺所有的功能以及您最好掌握的相关知识说明。
-2. 安装 2.1 资源要求 由于需要编译 Yocto 项目，所以对资源要求较高，具体要求如下</description></item><item><title>项目</title><link>https://dianshao-embedded.github.io/dianshao-docs/usermanual/project/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dianshao-embedded.github.io/dianshao-docs/usermanual/project/</guid><description>1. 创建项目 2. 增加元数据层 3. 上传项目 4. 本地项目路径 1. 创建项目 在颠勺中创建一个新项目十分简单，只需输入项目名称和你需要使用的 Yocto 版本号
+2. 安装 2.1 资源要求 由于需要编译 Yocto 项目，所以对资源要求较高，具体要求如下</description></item><item><title>项目</title><link>https://dianshao-embedded.github.io/dianshao-docs/usermanual/project/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dianshao-embedded.github.io/dianshao-docs/usermanual/project/</guid><description>1. 创建项目 2. 增加元数据层 3. 上传项目 4. 本地项目路径 5. 使用 bitbake 命令行 1. 创建项目 在颠勺中创建一个新项目十分简单，只需输入项目名称和你需要使用的 Yocto 版本号
 目前颠勺支持从 zeus 到 hardknott 四个 Yocto 版本
 颠勺默认创建的 Yocto 项目中使用 dianshao distro, 使用 systemd 作为启动方式
 颠勺默认创建的 Yocto 项目中包含如下元数据层

@@ -2,7 +2,7 @@
 提供 BBFILE 自动生成功能降低开发 Yocto 项目的难度，对初学者友好 提供标准化的嵌入式 Linux 项目开发管理流程，提高嵌入式终端项目的可维护性 提供 Yocto 项目模板导入导出功能，用标准化的项目模板加速开发 项目运行于 Docker 容器之上，可跨平台部署（Linux、Windows），部署简便 开发该项目的初衷是为了帮助自己更方便的开发 Yocto 项目，同时方便嵌入式开发团队协同开发。
 2. 项目范围 由于 Yocto-Linux 开发过程复杂，不容易归纳。因此颠勺项目只帮助用户构建文件系统，包括文件系统构建以及其中包含的所有软件，而不涉及内核、驱动及u-boot
 应用软件包自动构建（非内核、驱动、u-boot 软件） 文件系统自动构建 镜像及升级包自动构建 3. 开发流程 使用颠勺开发 Yocto 项目主要分为四步，详情参考后续章节
-创建 Yocto 项目，并根据需求增加相应的元数据层，默认创建的 Yocto 项目中包括 bitbake, meta-yocto, meta-openembedded, meta-rauc</description></item><item><title>项目</title><link>https://dianshao-embedded.github.io/dianshao-docs/usermanual/project/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dianshao-embedded.github.io/dianshao-docs/usermanual/project/</guid><description>1. 创建项目 2. 增加元数据层 3. 上传项目 4. 本地项目路径 1. 创建项目 在颠勺中创建一个新项目十分简单，只需输入项目名称和你需要使用的 Yocto 版本号
+创建 Yocto 项目，并根据需求增加相应的元数据层，默认创建的 Yocto 项目中包括 bitbake, meta-yocto, meta-openembedded, meta-rauc</description></item><item><title>项目</title><link>https://dianshao-embedded.github.io/dianshao-docs/usermanual/project/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dianshao-embedded.github.io/dianshao-docs/usermanual/project/</guid><description>1. 创建项目 2. 增加元数据层 3. 上传项目 4. 本地项目路径 5. 使用 bitbake 命令行 1. 创建项目 在颠勺中创建一个新项目十分简单，只需输入项目名称和你需要使用的 Yocto 版本号
 目前颠勺支持从 zeus 到 hardknott 四个 Yocto 版本
 颠勺默认创建的 Yocto 项目中使用 dianshao distro, 使用 systemd 作为启动方式
 颠勺默认创建的 Yocto 项目中包含如下元数据层

@@ -9,7 +9,7 @@
 
 
 
-  <meta name="description" content="1. 创建项目 2. 增加元数据层 3. 上传项目 4. 本地项目路径      1. 创建项目       在颠勺中创建一个新项目十分简单，只需输入项目名称和你需要使用的 Yocto 版本号
+  <meta name="description" content="1. 创建项目 2. 增加元数据层 3. 上传项目 4. 本地项目路径 5. 使用 bitbake 命令行      1. 创建项目       在颠勺中创建一个新项目十分简单，只需输入项目名称和你需要使用的 Yocto 版本号
   目前颠勺支持从 zeus 到 hardknott 四个 Yocto 版本
   颠勺默认创建的 Yocto 项目中使用 dianshao distro, 使用 systemd 作为启动方式
   颠勺默认创建的 Yocto 项目中包含如下元数据层
@@ -42,7 +42,7 @@
     
 
     <meta property="og:title" content="项目" />
-<meta property="og:description" content="1. 创建项目 2. 增加元数据层 3. 上传项目 4. 本地项目路径      1. 创建项目       在颠勺中创建一个新项目十分简单，只需输入项目名称和你需要使用的 Yocto 版本号
+<meta property="og:description" content="1. 创建项目 2. 增加元数据层 3. 上传项目 4. 本地项目路径 5. 使用 bitbake 命令行      1. 创建项目       在颠勺中创建一个新项目十分简单，只需输入项目名称和你需要使用的 Yocto 版本号
   目前颠勺支持从 zeus 到 hardknott 四个 Yocto 版本
   颠勺默认创建的 Yocto 项目中使用 dianshao distro, 使用 systemd 作为启动方式
   颠勺默认创建的 Yocto 项目中包含如下元数据层
@@ -57,7 +57,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="项目"/>
-<meta name="twitter:description" content="1. 创建项目 2. 增加元数据层 3. 上传项目 4. 本地项目路径      1. 创建项目       在颠勺中创建一个新项目十分简单，只需输入项目名称和你需要使用的 Yocto 版本号
+<meta name="twitter:description" content="1. 创建项目 2. 增加元数据层 3. 上传项目 4. 本地项目路径 5. 使用 bitbake 命令行      1. 创建项目       在颠勺中创建一个新项目十分简单，只需输入项目名称和你需要使用的 Yocto 版本号
   目前颠勺支持从 zeus 到 hardknott 四个 Yocto 版本
   颠勺默认创建的 Yocto 项目中使用 dianshao distro, 使用 systemd 作为启动方式
   颠勺默认创建的 Yocto 项目中包含如下元数据层
@@ -141,7 +141,7 @@
     "name": "项目",
     "headline": "项目",
     "alternativeHeadline": "",
-    "description": "1. 创建项目 2. 增加元数据层 3. 上传项目 4. 本地项目路径      1. 创建项目       在颠勺中创建一个新项目十分简单，只需输入项目名称和你需要使用的 Yocto 版本号\n  目前颠勺支持从 zeus 到 hardknott 四个 Yocto 版本\n  颠勺默认创建的 Yocto 项目中使用 dianshao distro, 使用 systemd 作为启动方式\n  颠勺默认创建的 Yocto 项目中包含如下元数据层\n  注意: 由于国内网络环境问题，元数据层仓库拉取时间可能会很长，请耐心等待\n2. 增加元数据层       默认创建的项目中只包含基本的元数据层，用户可以根据项目需要在项目创建完成后手动增加元数据层\n  点击项目详情里的 ADD META LAYER 即可手动增加",
+    "description": "1. 创建项目 2. 增加元数据层 3. 上传项目 4. 本地项目路径 5. 使用 bitbake 命令行      1. 创建项目       在颠勺中创建一个新项目十分简单，只需输入项目名称和你需要使用的 Yocto 版本号\n  目前颠勺支持从 zeus 到 hardknott 四个 Yocto 版本\n  颠勺默认创建的 Yocto 项目中使用 dianshao distro, 使用 systemd 作为启动方式\n  颠勺默认创建的 Yocto 项目中包含如下元数据层\n  注意: 由于国内网络环境问题，元数据层仓库拉取时间可能会很长，请耐心等待\n2. 增加元数据层       默认创建的项目中只包含基本的元数据层，用户可以根据项目需要在项目创建完成后手动增加元数据层\n  点击项目详情里的 ADD META LAYER 即可手动增加",
     "inLanguage": "en",
     "isFamilyFriendly": "true",
     "mainEntityOfPage": {
@@ -165,7 +165,7 @@
         }
     },
     "url" : "https:\/\/dianshao-embedded.github.io\/dianshao-docs\/usermanual\/project\/",
-    "wordCount" : "83",
+    "wordCount" : "116",
     "genre" : [ ]
 }
 </script>
@@ -1044,6 +1044,7 @@
         <li><a href="#2-增加元数据层">2. 增加元数据层</a></li>
         <li><a href="#3-上传项目">3. 上传项目</a></li>
         <li><a href="#4-本地项目路径">4. 本地项目路径</a></li>
+        <li><a href="#5-使用-bitbake-命令行">5. 使用 bitbake 命令行</a></li>
       </ul></nav>
     <hr />
   </div>
@@ -1131,7 +1132,24 @@
 </div>
 <p>生成的 yocto 项目还需要后续的开发，例如下一章节说的底层开发，因此用户还需要按照传统 yocto 项目的开发方式进行开发。</p>
 <p>生成的 yocto 项目位于 $DIANSHAO_YOCTO_PROJECT_PATH, 用户可以使用任意 IDE 打开项目，例如 vscode</p>
+<div class="gdoc-page__anchorwrap">
+    <h2 id="5-使用-bitbake-命令行">
+        5. 使用 bitbake 命令行
+        <a data-clipboard-text="https://dianshao-embedded.github.io/dianshao-docs/usermanual/project/#5-使用-bitbake-命令行" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: 5. 使用 bitbake 命令行" aria-label="Anchor to: 5. 使用 bitbake 命令行" href="#5-%e4%bd%bf%e7%94%a8-bitbake-%e5%91%bd%e4%bb%a4%e8%a1%8c">
+            <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h2>
+</div>
+<p>颠勺最大程度上还原了 bitbake 命令行显示方式，但对于 Error 的显示仍然不如命令行清晰，因此您可以在编译失败时使用命令行查看详细原因</p>
+<p>您无需搭建 yocto 编译环境，进入 docker-yocto docker container 即可使用 bitbake 命令</p>
+<pre tabindex="0"><code>docker exec -it dianshao-yocto bash
 
+cd ../yocto/${project_name}
+
+source oe-init-build-env
+
+bitbake target
+</code></pre>
   </article>
 
 
