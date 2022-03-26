@@ -48,13 +48,14 @@ weight: 5
 
 ## 7. 生成镜像、升级包 bbfile
 
-点击 make image file 自动生成镜像及 rauc 升级包 bbfile
+点击 make image file 自动生成镜像 bbfile
 
 ## 8. 编译镜像
 
 点击 bitbake image!! 开发编译构建镜像，由于 yocto 完全从源码开始编译，加上国内网络较慢，编译时间可能会很长，一两天时间也是正常的
 
-## 9. 上传升级包
+## 9. 编译并上传升级包
 
+点击 Generate update package 编译生成 rauc 升级包
 点击 dishes image 将升级包上传至上菜平台，由其通知终端进行升级
 
