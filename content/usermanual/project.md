@@ -39,3 +39,19 @@ weight: 2
 生成的 yocto 项目还需要后续的开发，例如下一章节说的底层开发，因此用户还需要按照传统 yocto 项目的开发方式进行开发。
 
 生成的 yocto 项目位于 $DIANSHAO_YOCTO_PROJECT_PATH, 用户可以使用任意 IDE 打开项目，例如 vscode
+
+## 5. 使用 bitbake 命令行
+
+颠勺最大程度上还原了 bitbake 命令行显示方式，但对于 Error 的显示仍然不如命令行清晰，因此您可以在编译失败时使用命令行查看详细原因
+
+您无需搭建 yocto 编译环境，进入 docker-yocto docker container 即可使用 bitbake 命令
+
+```
+docker exec -it dianshao-yocto bash
+
+cd ../yocto/${project_name}
+
+source oe-init-build-env
+
+bitbake target
+```
